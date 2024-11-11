@@ -12,138 +12,278 @@
   <title>Sign in</title>
 </head>
 
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-  }
-
-  header {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-  }
-
-  header nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-  }
-
-  .blog-detail {
-    display: flex;
-    margin: 20px;
-  }
-
-  article {
-    flex: 3;
-    padding: 20px;
-  }
-
-  article h2 {
-    color: #4CAF50;
-  }
-
-  article .blog-date {
-    font-size: 0.9em;
-    color: #777;
-  }
-
-  article img {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px 0;
-  }
-
-  .sidebar {
-    flex: 1;
-    padding: 20px;
-    background-color: #f4f4f4;
-    margin-left: 20px;
-  }
-
-  .sidebar h3 {
-    color: #4CAF50;
-  }
-
-  .sidebar ul {
-    list-style: none;
-  }
-
-  .sidebar ul li a {
-    text-decoration: none;
-    color: #4CAF50;
-  }
-
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  footer nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-  }
-</style>
 
 <body>
   <img src="accets/image/kroger_svg_logo--freshcart_kroger_color_logo--kroger.svg" class="d-block mx-auto mt-4"
     width="10%" alt="">
 
   <section>
-    <div class="container">
 
-      <main>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="">Recipe of the Month: Grilled Chicken Salad</h2>
-              <p class="lead">Posted on January 10, 2023 by John Doe</p>
-              <hr>
-              <img src="https://t4.ftcdn.net/jpg/02/04/18/15/360_F_204181560_5iVhpF6eFKWFnk5iFFM2228zhrjSgGfc.jpg" alt="Grilled Chicken Salad" class="w-100">
-              <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum
-                magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus.</p>
-              <p>Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis
-                parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Aenean eu leo
-                quam.</p>
-              <h2>Ingredients:</h2>
-              <ul>
-                <li>1 lb grilled chicken breast</li>
-                <li>2 cups mixed greens</li>
-                <li>1 cup cherry tomatoes, halved</li>
-                <li>1/2 cup crumbled feta cheese</li>
-              </ul>
-              <h2>Instructions:</h2>
-              <ol>
-                <li>Preheat grill to medium-high heat.</li>
-                <li>Grill chicken for 5-6 minutes per side.</li>
-                <li>Combine mixed greens, cherry tomatoes, and feta cheese.</li>
-              </ol>
-              <hr>
-              <div class="row mb-3">
-                <div class="col-md-6">
-                  <a href="#" class="btn btn-primary">Back to Blog</a>
+    <div class="fs-3 my-4 fw-bold text-center">Blog Detail</div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-8">
+          <div class="px-lg-4">
+            <div class="fs-3 fw-semibold">Business strategies to better face economic uncertainty</div>
+
+            <div class="row justify-content-lg-between justify-content- center mt-4">
+              <div class="col-auto d-flex gap-3">
+                <div class="d-flex gap-2 align-items-center text-muted">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  October 17,2020
                 </div>
-                <div class="col-md-6 text-right">
-                  <a href="#" class="btn btn-primary">Share on Social Media</a>
+                <div class="text-muted">Posted by: Admin</div>
+              </div>
+              <div class="col-auto d-flex gap-3 align-items-center text-muted">
+                Share this post:
+                <a href=""><i class="border p-1 text-black rounded-circle fa-brands fa-facebook"></i></a>
+                <a href=""><i class="border p-1 text-black rounded-circle fa-brands fa-twitter"></i></a>
+                <a href=""><i class="border p-1 text-black rounded-circle fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="border p-1 text-black rounded-circle fa-solid fa-ellipsis"></i></a>
+              </div>
+            </div>
+
+
+            <div class="fw-semibold my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at enim
+              vestibulum, dapibus elit quis,
+              pellentesque justo. Proin sit amet libero quis orci convallis mollis.
+            </div>
+
+
+            <div>
+              <img src="accets/image/Img (41).webp" width="100%" alt="">
+            </div>
+
+            <div class="fs-5 fw-bold my-3">Suggestions for you</div>
+
+            <ul>
+              <li class="mt-3 text-muted">Financial planning is the process of helping clients meet their financial
+                needs
+                today and reach their
+                dreams and goals tomorrow.</li>
+
+              <li class="mt-3 text-muted">Pellentesque fringilla augue quis dolor dapibus semper eget non nibh. Ut
+                lobortis, nulla sed euismod
+                posuere, quam magna scelerisque lectus, auctor iaculis quam ligula nec augue
+              </li>
+
+              <li class="mt-3 text-muted">In hac habitasse platea dictumst. Aliquam felis ante, tincidunt sed magna
+                auctor, aliquet dapibus
+                turpis.
+              </li>
+            </ul>
+
+
+            <div class="row my-5">
+              <div class="col-lg-6">
+                <img src="accets/image/Img (41).webp" width="100%" alt="">
+              </div>
+
+              <div class="col-lg-6">
+                <div>
+                  <div class="fw-bold fs-5">Nunc facilisis ante quis gravida mollis</div>
+                  <p>Ut porttitor tempus augue, quis luctus erat dapibus ac. Curabitur eu placerat purus.
+                    Vestibulum tempor velit diam, ac ultrices turpis posuere vitae. Orci varius natoque penatibus et
+                    magnis dis parturient montes, nascetur ridiculus mus. Suspendisse semper nec libero vitae elementum
+                  </p>
                 </div>
               </div>
             </div>
+
+
+            <div class="fs-5 fw-bold mt-4">Nullam at blandit felis, ut efficitur lorem. Nulla pharetra turpis eget
+              dictum
+              condimentum</div>
+            <p class="my-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis harum vel blanditiis eum ut enim quo
+              impedit
+              a consequatur aperiam expedita eveniet, sit eligendi dolor doloribus suscipit unde vero ullam?</p>
+
+            <div>
+              <img src="accets/image/Img (41).webp" width="100%" alt="">
+            </div>
+
+            <div class="fs-5 fw-bold my-3">Nunc facilisis ante quis gravida mollis</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, maxime dolores. Eveniet illum,
+              praesentium ea possimus recusandae cumque magnam totam quidem quae odio, facere nostrum amet a sint
+              perferendis! Voluptatibus!</p>
+
+
+            <div class="row justify-content-lg-between justify-content-center mt-4 fs-sm">
+              <div class="col-auto d-flex gap-3">
+                <div class="text-muted"><span class="fw-bold">Tags</span> :Business</div>
+                <div class="text-muted">Consulting</div>
+                <div class="text-muted">Onatrix</div>
+                <div class="text-muted">ThemeMu</div>
+              </div>
+              <div class="col-auto d-flex gap-3 align-items-center text-muted">
+                Share this post:
+                <a href=""><i class="border p-1 text-black rounded-circle fa-brands fa-facebook"></i></a>
+                <a href=""><i class="border p-1 text-black rounded-circle fa-brands fa-twitter"></i></a>
+                <a href=""><i class="border p-1 text-black rounded-circle fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="border p-1 text-black rounded-circle fa-solid fa-ellipsis"></i></a>
+              </div>
+            </div>
+
+
+            <div class="fs-5 fw-bold mt-4">Comments (6)</div>
+            <div>
+              <div class="d-flex align-items-center gap-3 my-5">
+                <img src="accets/image/Img (46).webp" alt="">
+                <div>
+                  <div class="fw-bold">Esther Howard</div>
+                  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tempore iure labore facilis animi
+                    magnam sequi amet earum, in odit dolorum nihil placeat eum repudiandae, velit veritatis quam, maxime
+                    veniam!</div>
+                  <div class="d-flex gap-3 mt-2">
+                    <div class="text-muted">Aug 18, 2020 at 4:07 am</div><a class="fw-bold text-primary"
+                      href="#">Reply</a>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3 my-5">
+                <img src="accets/image/Img (46).webp" alt="">
+                <div>
+                  <div class="fw-bold">Esther Howard</div>
+                  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tempore iure labore facilis animi
+                    magnam sequi amet earum, in odit dolorum nihil placeat eum repudiandae, velit veritatis quam, maxime
+                    veniam!</div>
+                  <div class="d-flex gap-3 mt-2">
+                    <div class="text-muted">Aug 18, 2020 at 4:07 am</div><a class="fw-bold text-primary"
+                      href="#">Reply</a>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3 my-5">
+                <img src="accets/image/Img (46).webp" alt="">
+                <div>
+                  <div class="fw-bold">Esther Howard</div>
+                  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tempore iure labore facilis animi
+                    magnam sequi amet earum, in odit dolorum nihil placeat eum repudiandae, velit veritatis quam, maxime
+                    veniam!</div>
+                  <div class="d-flex gap-3 mt-2">
+                    <div class="text-muted">Aug 18, 2020 at 4:07 am</div><a class="fw-bold text-primary"
+                      href="#">Reply</a>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3 my-5">
+                <img src="accets/image/Img (46).webp" alt="">
+                <div>
+                  <div class="fw-bold">Esther Howard</div>
+                  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tempore iure labore facilis animi
+                    magnam sequi amet earum, in odit dolorum nihil placeat eum repudiandae, velit veritatis quam, maxime
+                    veniam!</div>
+                  <div class="d-flex gap-3 mt-2">
+                    <div class="text-muted">Aug 18, 2020 at 4:07 am</div><a class="fw-bold text-primary"
+                      href="#">Reply</a>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3 my-5">
+                <img src="accets/image/Img (46).webp" alt="">
+                <div>
+                  <div class="fw-bold">Esther Howard</div>
+                  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tempore iure labore facilis animi
+                    magnam sequi amet earum, in odit dolorum nihil placeat eum repudiandae, velit veritatis quam, maxime
+                    veniam!</div>
+                  <div class="d-flex gap-3 mt-2">
+                    <div class="text-muted">Aug 18, 2020 at 4:07 am</div><a class="fw-bold text-primary"
+                      href="#">Reply</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="fs-5 fw-bold">Leave your thought here</div>
+            <div class="text-muted">Your email address will not be published. Required fields are marked *</div>
+
+            <form action="" class="my-4 px-3">
+              <div class="row gap-3">
+                <div class="col p-0">
+                  <input class="form-control border border-dark py-2 rounded-0" placeholder="Name" type="text">
+                </div>
+                <div class="col p-0">
+                  <input class="form-control border border-dark py-2 rounded-0" placeholder="Email" type="email">
+                </div>
+
+                <textarea name="" rows="3" class="form-control border rounded-0 border-dark" placeholder="Email Address"
+                  id=""></textarea>
+
+                <div class="p-0 d-flex align-items-baseline gap-2">
+                  <input type="checkbox" name="" id="Save">
+                  <label for="Save">Save my name, email, and website in this browser for the next time I
+                    comment.</label>
+                </div>
+
+                <button class="btn btn-primary fw-semibold fs-5">sebmit</button>
+              </div>
+            </form>
           </div>
         </div>
-      </main>
+
+        <div class="col-lg-3 col-md">
+          <div class="">
+            <div class="fs-5 fw-bold">Services categories</div>
+
+            <div class="fw-bold mt-4"><i class="fa-regular fa-circle-right fs-5"></i>&nbsp;&nbsp; Residential</div>
+            <div class="fw-bold mt-4"><i class="fa-regular fa-circle-right fs-5"></i>&nbsp;&nbsp; NON-QM</div>
+            <div class="fw-bold mt-4"><i class="fa-regular fa-circle-right fs-5"></i>&nbsp;&nbsp; Hard Money</div>
+            <div class="fw-bold mt-4"><i class="fa-regular fa-circle-right fs-5"></i>&nbsp;&nbsp; Commericial</div>
+            <div class="fw-bold mt-4"><i class="fa-regular fa-circle-right fs-5"></i>&nbsp;&nbsp; HELOC</div>
+
+
+            <div class="fs-5 fw-bold mt-3">Recent posts</div>
+
+
+
+            <div class="d-flex align-items-center gap-3 my-4">
+              <img src="accets/image/Img (33).webp" width="45%" alt="">
+              <div>
+                <div class="fw-bold fs-sm">Where the Money Is for Small Businesses</div>
+                <div class="fw-semibold text-muted">October 17,2020</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3 my-4">
+              <img src="accets/image/Img (33).webp" width="45%" alt="">
+              <div>
+                <div class="fw-bold fs-sm">Where the Money Is for Small Businesses</div>
+                <div class="fw-semibold text-muted">October 17,2020</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3 my-4">
+              <img src="accets/image/Img (33).webp" width="45%" alt="">
+              <div>
+                <div class="fw-bold fs-sm">Where the Money Is for Small Businesses</div>
+                <div class="fw-semibold text-muted">October 17,2020</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3 my-4">
+              <img src="accets/image/Img (33).webp" width="45%" alt="">
+              <div>
+                <div class="fw-bold fs-sm">Where the Money Is for Small Businesses</div>
+                <div class="fw-semibold text-muted">October 17,2020</div>
+              </div>
+            </div>
+
+
+            <div class="fs-5 fw-bold mt-3 mb-4">Tags</div>
+
+            <ul class="p-0 row">
+              <li class="list-group col-auto mb-2"><a class="border rounded-pill py-2 px-3 text-center fw-semibold fs-sm text-nowrap" href="#">AXE Capital</a></li>
+              <li class="list-group col-auto mb-2"><a class="border rounded-pill py-2 px-3 text-center fw-semibold fs-sm text-nowrap" href="#">Busines plans</a></li>
+              <li class="list-group col-auto mb-2"><a class="border rounded-pill py-2 px-3 text-center fw-semibold fs-sm text-nowrap" href="#">Middle</a></li>
+              <li class="list-group col-auto mb-2"><a class="border rounded-pill py-2 px-3 text-center fw-semibold fs-sm text-nowrap" href="#">Web design</a></li>
+              <li class="list-group col-auto mb-2"><a class="border rounded-pill py-2 px-3 text-center fw-semibold fs-sm text-nowrap" href="#">App</a></li>
+              <li class="list-group col-auto mb-2"><a class="border rounded-pill py-2 px-3 text-center fw-semibold fs-sm text-nowrap" href="#">Case study</a></li>
+              <li class="list-group col-auto mb-2"><a class="border rounded-pill py-2 px-3 text-center fw-semibold fs-sm text-nowrap" href="#">psychological</a></li>
+              <li class="list-group col-auto mb-2"><a class="border rounded-pill py-2 px-3 text-center fw-semibold fs-sm text-nowrap" href="#">Pricing</a></li>
+              <li class="list-group col-auto mb-2"><a class="border rounded-pill py-2 px-3 text-center fw-semibold fs-sm text-nowrap" href="#">Methods</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accets/style.css">
+    <link rel="stylesheet" href="accets/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>FAQ</title>
+</head>
+
+<style>
+    @media all {
+        .tab-list {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .tab-list>li {
+            padding: 0 3%;
+            /* text-align: center; */
+            float: left;
+            cursor: pointer;
+        }
+
+        .tab-list>li:first-child {
+            border-left: none;
+        }
+
+        .tab-list>li:hover>h3,
+        .tab-list>li.active>h3 {
+            color: #4ECDC4;
+        }
+
+        .tab-list>li>h3 {
+            font-weight: 100;
+            display: block;
+            transition: all 500ms ease;
+        }
+
+        .tabs-content {
+            opacity: 0;
+            display: none;
+            margin: 3em 0;
+        }
+
+        .tabs-content.active {
+            opacity: 1;
+            display: block;
+        }
+
+        /* Tab 1 Set */
+        /* .tabs-content#content-select-1>div {
+            padding: 0 4em;
+        } */
+
+        .tabs-content>div>i {
+            font-size: 65px;
+            float: left;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .tabs-content>div>article {
+            float: right;
+            width: 80%;
+        }
+
+        .tabs-content>div>article h3 {
+            font-weight: bold;
+        }
+
+        /* Bar Set Style */
+        .tab-header {
+            margin: 0 0 1em;
+        }
+
+        .tab-header h3 {
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .single-bar {
+            float: left;
+            text-align: center;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .single-bar p {
+            text-align: center;
+        }
+
+        .single-bar p.bar-place {
+            margin: 1em 0;
+        }
+
+        .bar-container {
+            border-bottom: 1px solid #fff;
+            padding: 0 1em;
+            min-height: 280px;
+            position: relative;
+        }
+
+        .bar {
+            position: absolute;
+            overflow: hidden;
+            bottom: 0;
+        }
+
+        .bar:first-child {
+            padding-left: 0;
+        }
+
+        .bar-value {
+            border: 1px solid #fff;
+            border-bottom: none;
+        }
+
+        .bar1 {
+            height: 150px;
+        }
+
+        .bar2 {
+            height: 245px;
+        }
+
+        .bar3 {
+            height: 110px;
+        }
+
+        .bar4 {
+            height: 95px;
+        }
+
+        .bar5 {
+            height: 180px;
+        }
+
+        .bar6 {
+            height: 50px;
+        }
+
+        .bar-highlight {
+            background-color: #4ECDC4;
+            border-color: #4ECDC4;
+        }
+
+        .bar-highlight:hover {
+            opacity: .9;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .accordion-button:not(.collapsed),
+        .accordion-item button:focus:not(:focus-visible) {
+            color: #000000 !important;
+            background-color: #ffffff !important;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        .gradient-blue {
+            background-color: #EDEBF9 !important;
+        }
+    }
+
+    .button {
+        display: inline-block;
+        margin: 4px 2px;
+        background-color: #ffffff;
+        font-size: 25px;
+        padding-left: 32px;
+        padding-right: 32px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        cursor: pointer;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .button:hover {
+        transition-duration: 0.4s;
+        -moz-transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        -o-transition-duration: 0.4s;
+        background-color: white;
+        color: black;
+    }
+
+    .search-container {
+        position: relative;
+        display: inline-block;
+        margin: 4px 2px;
+        height: 50px;
+        width: 50px;
+        vertical-align: bottom;
+    }
+
+    .mglass {
+        display: inline-block;
+        pointer-events: none;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+    }
+
+    .searchbutton {
+        /* position: absolute; */
+        font-size: 22px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .search:focus+.searchbutton {
+        transition-duration: 0.4s;
+        -moz-transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        -o-transition-duration: 0.4s;
+        background-color: white;
+        color: black;
+    }
+
+    .search {
+        position: absolute;
+        left: 49px;
+        /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
+        background-color: rgb(255, 255, 255);
+        outline: none;
+        color: #000000;
+        border: none;
+        padding: 0;
+        width: 0;
+        height: 100%;
+        z-index: 10;
+        transition-duration: 0.4s;
+        -moz-transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        -o-transition-duration: 0.4s;
+    }
+
+    .search:focus {
+        width: 363px;
+        /* Bar width+1px */
+        padding: 0 16px 0 0;
+    }
+
+    .expandright {
+        left: auto;
+        right: 0px;
+        /* Button width-1px */
+    }
+
+    .expandright:focus {
+        padding: 0 0 0 16px;
+    }
+</style>
+
+
+<body>
+    <div class="container mt-4 mb-5">
+        <div class="fs-3 fw-bold py-4">Pickup (Formerly Clicklist) FAQs</div>
+        <div class="row gap-lg-0 gap-md-0 gap-4">
+            <div class="col-lg-3 col-md-4">
+                <div class="shadow">
+                    <!-- Tabs Start -->
+                    <div class="container tabs rounded-3">
+                        <ul class="tab-list d-grid m-0 py-3">
+                            <li class="text-black fs-5 py-1 my-1 fw-semibold">
+                                Ways to Shop
+                            </li>
+                            <li id="select-1" class="text-black pointer fs-6 py-1 my-1 fw-semibold">
+                                <a href="#onee">Pickup (Formerly Clicklist)</a>
+                            </li>
+                            <li id="select-2" class="text-black pointer fs-6 py-1 my-1 fw-semibold">
+                                <a href="#two">Delivery</a>
+                            </li>
+                            <li id="select-3" class="fs-6 text-black fw-semibold py-1 my-1">
+                                <a href="#three">Ship</a>
+                            </li>
+                            <li id="select-4" class="fs-6 text-black fw-semibold py-1 my-1">
+                                <a href="#four">Shopping List</a>
+                            </li>
+                            <li id="select-5" class="fs-6 text-black fw-semibold py-1 my-1">
+                                <a href="#four">Fresh</a>
+                            </li>
+                            <li id="select-6" class="fs-6 text-black fw-semibold py-1 my-1">
+                                <a href="#four">KroGO</a>
+                            </li>
+                            <li id="select-7" class="fs-6 text-black fw-semibold py-1 my-1">
+                                <a href="#four">Store Mode</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Tabs End -->
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-8 rounded-3">
+                <section class="px-lg-3 px-3">
+                    <div class="row">
+                        <div class="tabs-content my-0 active" id="content-select-1">
+                            <section class="bg-light-blue">
+
+                                <div class="fw-semibold">How It Works</div>
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button fw-bold bg-white collapsed" shadow=""
+                                                rounded-4="" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="false"
+                                                aria-controls="collapseOne">
+                                                How can I order my groceries online?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample" style="">
+                                            <div class="accordion-body">
+                                                An eSIM is the modern version of the old-fashioned plastic SIM cards
+                                                which have historically
+                                                been used in mobile phones as a piece of hardware that sits inside your
+                                                phone. An eSIM is
+                                                software that allows you to download a Sim instantly to your phone,
+                                                allowing you to connect
+                                                to a local mobile network almost anywhere in the world. An eSIM is a
+                                                more convenient, and
+                                                environmentally friendly way for you to connect. Simply download the Sim
+                                                Local app today,
+                                                activate a bundle, and go.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                What is Pickup and how does it work?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our eSIMs are completely free to install. Whenever you need
+                                                connectivity, you can purchase a
+                                                plan via the SMS we send you.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                How do I reserve a time slot and shop for Pickup?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                For full instructions on downloading an eSIM and purchasing a plan,
+                                                please visit our
+                                                installation page.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive">
+                                                How do I pay for my order?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Your data plan will activate as soon as you arrive in your destination
+                                                country or region. If
+                                                you are already in your desired destination when you book a plan, it
+                                                will activate
+                                                immediately.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseFour">
+                                                Can I use government benefits such as SNAP EBT to pay for my order?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Yes. Our eSIMs work seamlessly alongside any current SIM card or eSIM
+                                                already installed on
+                                                your device. Simply download a United States plan, and when you are
+                                                in United States, you
+                                                will be able to browse the internet and use apps at local data prices,
+                                                instead of paying for
+                                                international roaming charges. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSixth"
+                                                aria-expanded="false" aria-controls="collapseSixth">
+                                                How long do I have to pick up my order, and what happens if I miss my
+                                                time slot?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSixth" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our eSIM plans are data-only – meaning that they do not support the use
+                                                of voice calls or
+                                                SMS messages. You will still be able to make phone calls and send SMS
+                                                messages in United
+                                                States, however they will be billed to your usual network provider. Any
+                                                internet-based
+                                                messaging or calling services such as WhatsApp, iMessage, Telegram, Zoom
+                                                or FaceTime can be
+                                                used with a BetterRoaming eSIM however.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="fw-semibold my-3 mt-5">Pickup Products and Pricing</div>
+
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                                                aria-expanded="false" aria-controls="collapseSeven">
+                                                After I place my order, where do I go to pick it up when it’s ready?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSeven" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                It’s amazing and only getting better. With a BetterRoaming eSIM, you'll
+                                                be using the best
+                                                mobile networks in the world from providers like Vodafone, AT&amp;T,
+                                                Orange and many more. We
+                                                also support 5G coverage in over 50 countries, with new ones being added
+                                                all the time.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                                                aria-expanded="false" aria-controls="collapseEight">
+                                                How far in advance can I schedule a pickup time?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseEight" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                At BetterRoaming, we offer a range of eSIM plans for United States, so
+                                                you’re sure to find
+                                                the best eSIM for you here. Choose the ideal data volume and validity
+                                                period for your trip
+                                                now. And if you’re venturing further, we also offer Europe-wide and
+                                                global eSIM plans to
+                                                provide uninterrupted mobile connectivity across borders. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapsenine"
+                                                aria-expanded="false" aria-controls="collapsenine">
+                                                Can someone else get my Pickup order on my behalf?
+                                            </button>
+                                        </h2>
+                                        <div id="collapsenine" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                At BetterRoaming, we offer a range of eSIM plans for United States, so
+                                                you’re sure to find
+                                                the best eSIM for you here. Choose the ideal data volume and validity
+                                                period for your trip
+                                                now. And if you’re venturing further, we also offer Europe-wide and
+                                                global eSIM plans to
+                                                provide uninterrupted mobile connectivity across borders. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="tabs-content my-0" id="content-select-2">
+                            <section class="bg-light-blue">
+
+                                <div class="accordion" id="accordionExample">
+                                    <div class="fw-semibold my-3 mt-5">Pickup Products and Pricing</div>
+
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                                                aria-expanded="false" aria-controls="collapseSeven">
+                                                After I place my order, where do I go to pick it up when it’s ready?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSeven" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                It’s amazing and only getting better. With a BetterRoaming eSIM, you'll
+                                                be using the best
+                                                mobile networks in the world from providers like Vodafone, AT&amp;T,
+                                                Orange and many more. We
+                                                also support 5G coverage in over 50 countries, with new ones being added
+                                                all the time.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                                                aria-expanded="false" aria-controls="collapseEight">
+                                                How far in advance can I schedule a pickup time?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseEight" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                At BetterRoaming, we offer a range of eSIM plans for United States, so
+                                                you’re sure to find
+                                                the best eSIM for you here. Choose the ideal data volume and validity
+                                                period for your trip
+                                                now. And if you’re venturing further, we also offer Europe-wide and
+                                                global eSIM plans to
+                                                provide uninterrupted mobile connectivity across borders. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapsenine"
+                                                aria-expanded="false" aria-controls="collapsenine">
+                                                Can someone else get my Pickup order on my behalf?
+                                            </button>
+                                        </h2>
+                                        <div id="collapsenine" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                At BetterRoaming, we offer a range of eSIM plans for United States, so
+                                                you’re sure to find
+                                                the best eSIM for you here. Choose the ideal data volume and validity
+                                                period for your trip
+                                                now. And if you’re venturing further, we also offer Europe-wide and
+                                                global eSIM plans to
+                                                provide uninterrupted mobile connectivity across borders. 
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="fw-semibold">How It Works</div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button fw-bold bg-white collapsed" shadow=""
+                                                rounded-4="" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="false"
+                                                aria-controls="collapseOne">
+                                                How can I order my groceries online?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample" style="">
+                                            <div class="accordion-body">
+                                                An eSIM is the modern version of the old-fashioned plastic SIM cards
+                                                which have historically
+                                                been used in mobile phones as a piece of hardware that sits inside your
+                                                phone. An eSIM is
+                                                software that allows you to download a Sim instantly to your phone,
+                                                allowing you to connect
+                                                to a local mobile network almost anywhere in the world. An eSIM is a
+                                                more convenient, and
+                                                environmentally friendly way for you to connect. Simply download the Sim
+                                                Local app today,
+                                                activate a bundle, and go.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                What is Pickup and how does it work?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our eSIMs are completely free to install. Whenever you need
+                                                connectivity, you can purchase a
+                                                plan via the SMS we send you.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                How do I reserve a time slot and shop for Pickup?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                For full instructions on downloading an eSIM and purchasing a plan,
+                                                please visit our
+                                                installation page.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive">
+                                                How do I pay for my order?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Your data plan will activate as soon as you arrive in your destination
+                                                country or region. If
+                                                you are already in your desired destination when you book a plan, it
+                                                will activate
+                                                immediately.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseFour">
+                                                Can I use government benefits such as SNAP EBT to pay for my order?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Yes. Our eSIMs work seamlessly alongside any current SIM card or eSIM
+                                                already installed on
+                                                your device. Simply download a United States plan, and when you are
+                                                in United States, you
+                                                will be able to browse the internet and use apps at local data prices,
+                                                instead of paying for
+                                                international roaming charges. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSixth"
+                                                aria-expanded="false" aria-controls="collapseSixth">
+                                                How long do I have to pick up my order, and what happens if I miss my
+                                                time slot?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSixth" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our eSIM plans are data-only – meaning that they do not support the use
+                                                of voice calls or
+                                                SMS messages. You will still be able to make phone calls and send SMS
+                                                messages in United
+                                                States, however they will be billed to your usual network provider. Any
+                                                internet-based
+                                                messaging or calling services such as WhatsApp, iMessage, Telegram, Zoom
+                                                or FaceTime can be
+                                                used with a BetterRoaming eSIM however.
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="tabs-content my-0" id="content-select-3">
+                            <section class="bg-light-blue">
+
+                                <div class="fw-semibold">How It Works</div>
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button fw-bold bg-white collapsed" shadow=""
+                                                rounded-4="" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="false"
+                                                aria-controls="collapseOne">
+                                                How can I order my groceries online?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample" style="">
+                                            <div class="accordion-body">
+                                                An eSIM is the modern version of the old-fashioned plastic SIM cards
+                                                which have historically
+                                                been used in mobile phones as a piece of hardware that sits inside your
+                                                phone. An eSIM is
+                                                software that allows you to download a Sim instantly to your phone,
+                                                allowing you to connect
+                                                to a local mobile network almost anywhere in the world. An eSIM is a
+                                                more convenient, and
+                                                environmentally friendly way for you to connect. Simply download the Sim
+                                                Local app today,
+                                                activate a bundle, and go.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                What is Pickup and how does it work?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our eSIMs are completely free to install. Whenever you need
+                                                connectivity, you can purchase a
+                                                plan via the SMS we send you.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                How do I reserve a time slot and shop for Pickup?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                For full instructions on downloading an eSIM and purchasing a plan,
+                                                please visit our
+                                                installation page.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive">
+                                                How do I pay for my order?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Your data plan will activate as soon as you arrive in your destination
+                                                country or region. If
+                                                you are already in your desired destination when you book a plan, it
+                                                will activate
+                                                immediately.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseFour">
+                                                Can I use government benefits such as SNAP EBT to pay for my order?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Yes. Our eSIMs work seamlessly alongside any current SIM card or eSIM
+                                                already installed on
+                                                your device. Simply download a United States plan, and when you are
+                                                in United States, you
+                                                will be able to browse the internet and use apps at local data prices,
+                                                instead of paying for
+                                                international roaming charges. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSixth"
+                                                aria-expanded="false" aria-controls="collapseSixth">
+                                                How long do I have to pick up my order, and what happens if I miss my
+                                                time slot?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSixth" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our eSIM plans are data-only – meaning that they do not support the use
+                                                of voice calls or
+                                                SMS messages. You will still be able to make phone calls and send SMS
+                                                messages in United
+                                                States, however they will be billed to your usual network provider. Any
+                                                internet-based
+                                                messaging or calling services such as WhatsApp, iMessage, Telegram, Zoom
+                                                or FaceTime can be
+                                                used with a BetterRoaming eSIM however.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="fw-semibold my-3 mt-5">Pickup Products and Pricing</div>
+
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                                                aria-expanded="false" aria-controls="collapseSeven">
+                                                After I place my order, where do I go to pick it up when it’s ready?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSeven" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                It’s amazing and only getting better. With a BetterRoaming eSIM, you'll
+                                                be using the best
+                                                mobile networks in the world from providers like Vodafone, AT&amp;T,
+                                                Orange and many more. We
+                                                also support 5G coverage in over 50 countries, with new ones being added
+                                                all the time.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                                                aria-expanded="false" aria-controls="collapseEight">
+                                                How far in advance can I schedule a pickup time?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseEight" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                At BetterRoaming, we offer a range of eSIM plans for United States, so
+                                                you’re sure to find
+                                                the best eSIM for you here. Choose the ideal data volume and validity
+                                                period for your trip
+                                                now. And if you’re venturing further, we also offer Europe-wide and
+                                                global eSIM plans to
+                                                provide uninterrupted mobile connectivity across borders. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapsenine"
+                                                aria-expanded="false" aria-controls="collapsenine">
+                                                Can someone else get my Pickup order on my behalf?
+                                            </button>
+                                        </h2>
+                                        <div id="collapsenine" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                At BetterRoaming, we offer a range of eSIM plans for United States, so
+                                                you’re sure to find
+                                                the best eSIM for you here. Choose the ideal data volume and validity
+                                                period for your trip
+                                                now. And if you’re venturing further, we also offer Europe-wide and
+                                                global eSIM plans to
+                                                provide uninterrupted mobile connectivity across borders. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="tabs-content my-0" id="content-select-4">
+                            <section class="bg-light-blue">
+
+                                <div class="accordion" id="accordionExample">
+                                    <div class="fw-semibold my-3 mt-5">Pickup Products and Pricing</div>
+
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                                                aria-expanded="false" aria-controls="collapseSeven">
+                                                After I place my order, where do I go to pick it up when it’s ready?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSeven" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                It’s amazing and only getting better. With a BetterRoaming eSIM, you'll
+                                                be using the best
+                                                mobile networks in the world from providers like Vodafone, AT&amp;T,
+                                                Orange and many more. We
+                                                also support 5G coverage in over 50 countries, with new ones being added
+                                                all the time.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                                                aria-expanded="false" aria-controls="collapseEight">
+                                                How far in advance can I schedule a pickup time?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseEight" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                At BetterRoaming, we offer a range of eSIM plans for United States, so
+                                                you’re sure to find
+                                                the best eSIM for you here. Choose the ideal data volume and validity
+                                                period for your trip
+                                                now. And if you’re venturing further, we also offer Europe-wide and
+                                                global eSIM plans to
+                                                provide uninterrupted mobile connectivity across borders. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapsenine"
+                                                aria-expanded="false" aria-controls="collapsenine">
+                                                Can someone else get my Pickup order on my behalf?
+                                            </button>
+                                        </h2>
+                                        <div id="collapsenine" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                At BetterRoaming, we offer a range of eSIM plans for United States, so
+                                                you’re sure to find
+                                                the best eSIM for you here. Choose the ideal data volume and validity
+                                                period for your trip
+                                                now. And if you’re venturing further, we also offer Europe-wide and
+                                                global eSIM plans to
+                                                provide uninterrupted mobile connectivity across borders. 
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="fw-semibold">How It Works</div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button fw-bold bg-white collapsed" shadow=""
+                                                rounded-4="" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="false"
+                                                aria-controls="collapseOne">
+                                                How can I order my groceries online?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample" style="">
+                                            <div class="accordion-body">
+                                                An eSIM is the modern version of the old-fashioned plastic SIM cards
+                                                which have historically
+                                                been used in mobile phones as a piece of hardware that sits inside your
+                                                phone. An eSIM is
+                                                software that allows you to download a Sim instantly to your phone,
+                                                allowing you to connect
+                                                to a local mobile network almost anywhere in the world. An eSIM is a
+                                                more convenient, and
+                                                environmentally friendly way for you to connect. Simply download the Sim
+                                                Local app today,
+                                                activate a bundle, and go.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                What is Pickup and how does it work?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our eSIMs are completely free to install. Whenever you need
+                                                connectivity, you can purchase a
+                                                plan via the SMS we send you.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                How do I reserve a time slot and shop for Pickup?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                For full instructions on downloading an eSIM and purchasing a plan,
+                                                please visit our
+                                                installation page.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive">
+                                                How do I pay for my order?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Your data plan will activate as soon as you arrive in your destination
+                                                country or region. If
+                                                you are already in your desired destination when you book a plan, it
+                                                will activate
+                                                immediately.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseFour">
+                                                Can I use government benefits such as SNAP EBT to pay for my order?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Yes. Our eSIMs work seamlessly alongside any current SIM card or eSIM
+                                                already installed on
+                                                your device. Simply download a United States plan, and when you are
+                                                in United States, you
+                                                will be able to browse the internet and use apps at local data prices,
+                                                instead of paying for
+                                                international roaming charges. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSixth"
+                                                aria-expanded="false" aria-controls="collapseSixth">
+                                                How long do I have to pick up my order, and what happens if I miss my
+                                                time slot?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSixth" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our eSIM plans are data-only – meaning that they do not support the use
+                                                of voice calls or
+                                                SMS messages. You will still be able to make phone calls and send SMS
+                                                messages in United
+                                                States, however they will be billed to your usual network provider. Any
+                                                internet-based
+                                                messaging or calling services such as WhatsApp, iMessage, Telegram, Zoom
+                                                or FaceTime can be
+                                                used with a BetterRoaming eSIM however.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-5">
+                            <section class="bg-light-blue">
+
+                                <div class="fw-semibold">How It Works</div>
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button fw-bold bg-white collapsed" shadow=""
+                                                rounded-4="" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="false"
+                                                aria-controls="collapseOne">
+                                                How can I order my groceries online?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample" style="">
+                                            <div class="accordion-body">
+                                                An eSIM is the modern version of the old-fashioned plastic SIM cards
+                                                which have historically
+                                                been used in mobile phones as a piece of hardware that sits inside your
+                                                phone. An eSIM is
+                                                software that allows you to download a Sim instantly to your phone,
+                                                allowing you to connect
+                                                to a local mobile network almost anywhere in the world. An eSIM is a
+                                                more convenient, and
+                                                environmentally friendly way for you to connect. Simply download the Sim
+                                                Local app today,
+                                                activate a bundle, and go.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                What is Pickup and how does it work?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our eSIMs are completely free to install. Whenever you need
+                                                connectivity, you can purchase a
+                                                plan via the SMS we send you.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                How do I reserve a time slot and shop for Pickup?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                For full instructions on downloading an eSIM and purchasing a plan,
+                                                please visit our
+                                                installation page.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive">
+                                                How do I pay for my order?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Your data plan will activate as soon as you arrive in your destination
+                                                country or region. If
+                                                you are already in your desired destination when you book a plan, it
+                                                will activate
+                                                immediately.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseFour">
+                                                Can I use government benefits such as SNAP EBT to pay for my order?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Yes. Our eSIMs work seamlessly alongside any current SIM card or eSIM
+                                                already installed on
+                                                your device. Simply download a United States plan, and when you are
+                                                in United States, you
+                                                will be able to browse the internet and use apps at local data prices,
+                                                instead of paying for
+                                                international roaming charges. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSixth"
+                                                aria-expanded="false" aria-controls="collapseSixth">
+                                                How long do I have to pick up my order, and what happens if I miss my
+                                                time slot?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSixth" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our eSIM plans are data-only – meaning that they do not support the use
+                                                of voice calls or
+                                                SMS messages. You will still be able to make phone calls and send SMS
+                                                messages in United
+                                                States, however they will be billed to your usual network provider. Any
+                                                internet-based
+                                                messaging or calling services such as WhatsApp, iMessage, Telegram, Zoom
+                                                or FaceTime can be
+                                                used with a BetterRoaming eSIM however.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="fw-semibold my-3 mt-5">Pickup Products and Pricing</div>
+
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                                                aria-expanded="false" aria-controls="collapseSeven">
+                                                After I place my order, where do I go to pick it up when it’s ready?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSeven" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                It’s amazing and only getting better. With a BetterRoaming eSIM, you'll
+                                                be using the best
+                                                mobile networks in the world from providers like Vodafone, AT&amp;T,
+                                                Orange and many more. We
+                                                also support 5G coverage in over 50 countries, with new ones being added
+                                                all the time.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                                                aria-expanded="false" aria-controls="collapseEight">
+                                                How far in advance can I schedule a pickup time?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseEight" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                At BetterRoaming, we offer a range of eSIM plans for United States, so
+                                                you’re sure to find
+                                                the best eSIM for you here. Choose the ideal data volume and validity
+                                                period for your trip
+                                                now. And if you’re venturing further, we also offer Europe-wide and
+                                                global eSIM plans to
+                                                provide uninterrupted mobile connectivity across borders. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 my-2 shadow rounded-4">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapsenine"
+                                                aria-expanded="false" aria-controls="collapsenine">
+                                                Can someone else get my Pickup order on my behalf?
+                                            </button>
+                                        </h2>
+                                        <div id="collapsenine" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                At BetterRoaming, we offer a range of eSIM plans for United States, so
+                                                you’re sure to find
+                                                the best eSIM for you here. Choose the ideal data volume and validity
+                                                period for your trip
+                                                now. And if you’re venturing further, we also offer Europe-wide and
+                                                global eSIM plans to
+                                                provide uninterrupted mobile connectivity across borders. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- Tabs Content End -->
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="accets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+
+
+    <script>
+
+        $(".tab-list li").on("click", function () {
+            var tabId = ".tab-list li#" + $(this).attr("id");
+            var tabDivId = ".tabs-content#content-" + $(this).attr("id");
+
+            if (!$(this).hasClass("active")) {
+                $(".tab-list li").removeClass("active");
+                $(this).addClass("active");
+
+                $(".tabs-content").removeClass("active");
+                $(tabDivId).addClass("active");
+            }
+        });
+
+    </script>
+</body>
+
+</html>
