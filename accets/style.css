@@ -8,8 +8,38 @@ html,
 body {
     width: 100%;
     height: 100vh;
+    min-width: 360px;
 }
 
 .bg-light-opacity {
     background: rgba(255, 254, 254, 0.897);
+}
+
+.slick-next {
+    right: 5px !important;
+}
+
+.slick-prev {
+    left: 5px !important;
+    z-index: 1 !important;
+}
+
+
+.slick-next:before{
+    content: '▶️ ' !important;
+}
+.slick-prev:before{
+    content: '◀️' !important;
+}
+
+li {
+    list-style-type: none;
+}
+
+.hov-img {
+    transition: ease 1s;
+}
+
+.hov-img:hover {
+    transform: scale(1.1);
 }
