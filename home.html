@@ -15,101 +15,185 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
         integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Sign in</title>
+    <title>Home</title>
 </head>
 
 <style>
     .home-slider .slick-dots {
         bottom: 10px;
     }
+
+    /* tabs */
+    .tabs {
+        padding-top: 7%
+    }
+
+    .tab-list {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .tab-list>li {
+        padding: 3% 3%;
+        float: left;
+        cursor: pointer;
+    }
+
+    .tab-list>li:first-child {
+        border-left: none;
+    }
+
+    .inside .tab-list>li:first-child {
+        background-color: #0070fc;
+        color: #fff;
+    }
+
+    .tab-list>li:hover {
+        text-decoration: underline;
+    }
+
+
+    .tab-list>li.active {
+        color: #ffffff;
+        background-color: #0070fc;
+        background-color: #0070fc;
+        padding: 3% 5%;
+    }
+
+    .inside .tab-list>li.active {
+        color: #ffffff;
+        background-color: #0070fc;
+        padding: 3% 5%;
+    }
+
+    .tab-list>li>h3 {
+        font-weight: 100;
+        display: block;
+        transition: all 500ms ease;
+    }
+
+    .tabs-content {
+        opacity: 0;
+        display: none;
+        margin: 3em 0;
+    }
+
+
+    .tabs-content.active {
+        opacity: 1;
+        display: block;
+    }
+
+    .inside .tabs-content.active {
+        opacity: 1;
+        display: block;
+    }
+
+    .tab-list>li.active:after {
+        content: "";
+        border-top: 0 solid transparent;
+        border-left: 13px solid transparent;
+        clear: both;
+        display: inline-block;
+        transform: rotate(-45deg);
+        margin-right: -20px;
+        margin-top: 4px;
+        float: right;
+        border-bottom: 13px solid #0070fc;
+        /* border-bottom: 13px solid #000; */
+    }
+
+    .tabs-content>div>i {
+        font-size: 65px;
+        float: left;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .tabs-content>div>article {
+        float: right;
+        width: 80%;
+    }
+
+    .tabs-content>div>article h3 {
+        font-weight: bold;
+    }
+
+    /* Bar Set Style */
+    .tab-header {
+        margin: 0 0 1em;
+    }
+
+    .tab-header h3 {
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+
+    .tabs-content li {
+        margin: 5px 0px;
+    }
+
+    .tabs-content li:hover {
+        text-decoration: underline;
+    }
+
+
+    .nav-tabs li {
+        padding: 3% 5%;
+        margin: 0;
+    }
+
+    .nav-tabs li.active {
+        background-color: #0070fc;
+        padding: 3% 5%;
+        color: #fff;
+    }
+
+
+    .nav-tabs li.active:after {
+        content: "";
+        border-top: 0 solid transparent;
+        border-left: 13px solid transparent;
+        clear: both;
+        display: inline-block;
+        transform: rotate(-45deg);
+        margin-right: -20px;
+        margin-top: 4px;
+        float: right;
+        border-bottom: 13px solid #0070fc;
+        /* border-bottom: 13px solid #000; */
+    }
+
+
+    /* tabs end */
 </style>
 
 
 <body>
-
-    <div class="bg-primary d-none">
-        <div class="container">
-            <div class="d-flex align-items-center justify-content-around py-2">
-                <img src="accets/image/kroger_svg_logo_link_white--kroger_svg_logo_link_white--freshcart-singlecolor.svg"
-                    width="100" alt="">
-
-                <div class="d-inline-block text-white">
-                    <div class="">Delivering to Ashburn 20146</div>
-                    <div class="fw-bold lh-1"><i class="fa-solid fa-location-dot"></i> Update location</div>
-                </div>
-
-                <div class="d-inline-flex">
-                    <li class="nav-item dropdown d-flex align-items-center bg-body-secondary p-1">
-                        <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            All
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-
-                    <form action="#">
-                        <input type="search" class="form-control rounded-0 w-100" name="" id="">
-                    </form>
-
-                    <button class="btn text-white bg-success rounded-0"><i
-                            class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <img src="accets/image/en.svg" alt=""> EN
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-
-
-                <div class="d-inline-block text-white">
-                    <div class="lh-1">Hello, sign in</div>
-                    <div class="fw-bold lh-1"> Account & Lists</div>
-                </div>
-                <div class="d-inline-block text-white">
-                    <div class="lh-1">Returns</div>
-                    <div class="fw-bold lh-1"> & Orders</div>
-                </div>
-
-                <div class="text-white fw-bold"><i class="fa-solid fa-cart-shopping fs-4"></i>Cart</div>
+    <nav class="navbar navbar-expand-lg bg-primary d-block p-0">
+        <div class="container py-3">
+            <div class="d-flex align-items-center gap-3">
+                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars text-white"></i>
+                </button>
+                <i class="fa fa-search text-white d-lg-none d-block" aria-hidden="true"></i>
             </div>
-        </div>
-    </div>
-    <nav class="d-none navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <a class="navbar-brand m-0" href="#"><img src="accets/image/kroger-logo.svg" width="100vw" alt=""></a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Holiday Deals</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Best Sellers</a>
+                        <a class="nav-link" href="#">Link</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Prime
+                            Dropdown
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -121,27 +205,1180 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Amazon Basics</a>
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Today's Deals</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">New Releases</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Music</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Customer Service</a>
-                    </li>
+                </ul> -->
+                <form class="d-flex justify-content-center w-100" role="search">
+                    <div class="bg-white py-1 d-flex align-items-center rounded-pill col-lg-8 overflow-hidden px-3">
+                        <input class="form-control me-2 border-0 w-100" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn p-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-flex gap-4 text-white">
+                <div class="text-center d-lg-block d-none">
+                    <i class="fa-regular fa-heart fs-5"></i>
+                    <div class="fs-resp d-lg-block d-none fs-sm">Wish Lists</div>
+                </div>
+                <div class="text-center">
+                    <i class="fa-regular fa-user fs-5"></i>
+                    <div class="fs-resp d-lg-block d-none fs-sm">Sign In</div>
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-cart-shopping fs-5"></i>
+                    <div class="fs-resp d-lg-block d-none fs-sm">Cart</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-body-tertiary py-2 shadow-sm">
+            <div class="container">
+                <ul class="p-0 d-flex gap-4 m-0">
+                    <li class="fw-semibold"><a href="#">Shop</a></li>
+                    <li class="fw-semibold"><a href="#">About Us</a></li>
+                    <li class="fw-semibold"><a href="#">Pickup & Delivery</a></li>
+                    <li class="fw-semibold"><a href="#">Blogs</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
 
+    <!-- shop dropdown -->
+    <div class="container mt-2 mb-5">
+        <div class="row ">
+            <div class="col-lg-3">
+                <div class="">
+                    <!-- Tabs Start -->
+                    <div class="container py-0 tabs rounded-3">
+                        <ul class="tab-list d-grid border-end">
+                            <li id="select-1" class="active pointer fs-6 fw-semibold">
+                                <a>Popular</a>
+                            </li>
+                            <li id="select-2" class="pointer fs-6 fw-semibold">
+                                <a>Seasonal Favorites</a>
+                            </li>
+                            <li id="select-3" class="fs-6 fw-semibold">
+                                <a>Fresh</a>
+                            </li>
+                            <li id="select-4" class="fs-6 fw-semibold">
+                                <a>Grocery</a>
+                            </li>
+                            <li id="select-5" class="fs-6 fw-semibold">
+                                <a>Beer, Wine & Liquor</a>
+                            </li>
+                            <li id="select-6" class="fs-6 fw-semibold">
+                                <a>Health, Beauty & Baby</a>
+                            </li>
+                            <li id="select-7" class="fs-6 fw-semibold">
+                                <a>Cleaning & Household</a>
+                            </li>
+                            <li id="select-8" class="fs-6 fw-semibold">
+                                <a>Home, Electronics & Toys</a>
+                            </li>
+                            <li id="select-9" class="fs-6 fw-semibold">
+                                <a>Pet</a>
+                            </li>
+                            <li id="select-10" class="fs-6 fw-semibold">
+                                <a>Our Brands</a>
+                            </li>
+                            <li id="select-11" class="fs-6 fw-semibold">
+                                <a>Get it Shipped</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Tabs End -->
+                </div>
+            </div>
+            <div class="col-lg-9 rounded-3">
+                <section class="px-lg-0 px-3">
+                    <div class="row">
+                        <!-- Tabs Content Start -->
+                        <div class="tabs-content my-0" id="content-select-1">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="fw-semibold my-2">I Would Like to:</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Start a Pickup or Delivery Order</a></li>
+                                        <li><a href="#">Save with This Week's Top Deals</a></li>
+                                        <li><a href="#">Explore Health Services</a></li>
+                                        <li><a href="#">Order Ahead Cakes, Party Platters & More</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="fw-semibold my-2">Trending</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Boost Annual Members Get Streaming On Us</a></li>
+                                        <li><a href="#">Buy 6 or More, Save 50¢ Each</a></li>
+                                        <li><a href="#">Early Black Friday Deals</a></li>
+                                        <li><a href="#">Budget-friendly Thanksgiving Ideas</a></li>
+                                        <li><a href="#">Holiday Recipes from Around the World</a></li>
+                                        <li><a href="#">Find Hot New Arrivals</a></li>
+                                        <li><a href="#">Seasonal Vaccines</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="tabs-content my-0" id="content-select-2">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Football</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Everything for Game Day</a></li>
+                                        <li><a href="#">Football Snacks & Apps</a></li>
+                                        <li><a href="#">Football Beverages</a></li>
+                                        <li><a href="#">Easy Tailgating Recipes</a></li>
+                                        <li><a href="#">Order Ahead for Tailgating</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Thanksgiving</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Save on Turkeys & More</a></li>
+                                        <li><a href="#">Thanksgiving Sides</a></li>
+                                        <li><a href="#">Budget-friendly Thanksgiving Ideas</a></li>
+                                        <li><a href="#">Tools & Gadgets​</a></li>
+                                        <li><a href="#">Order Ahead for Thanksgiving</a></li>
+                                        <li><a href="#">Desserts & Baked Goods</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Black Friday</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Score Black Friday Deals All Month Long</a></li>
+                                        <li><a href="#">Up to 50% Off Toys</a></li>
+                                        <li><a href="#">Electronics</a></li>
+                                        <li><a href="#">Up to 50% Off Home Decor & More</a></li>
+                                        <li><a href="#">Exclusive Pickup & Delivery Deals</a></li>
+                                        <li><a href="#">Deals Shipped to Your Door</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Holiday Gifts & Décor</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Your Holiday Gift Guide​</a></li>
+                                        <li><a href="#">Toys​</a></li>
+                                        <li><a href="#">Candy</a></li>
+                                        <li><a href="#">Stocking Stuffers</a></li>
+                                        <li><a href="#">Holiday Decorations</a></li>
+                                        <li><a href="#">Gift Cards</a></li>
+                                        <li><a href="#">Give the Gift of Boost</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Holiday Meals</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Holiday Meal Must-haves</a></li>
+                                        <li><a href="#">Apps & Sides</a></li>
+                                        <li><a href="#">Baking Essentials</a></li>
+                                        <li><a href="#">Cookie Recipes</a></li>
+                                        <li><a href="#">Holiday Drinks</a></li>
+                                        <li><a href="#">Order Ahead for the Holidays</a></li>
+                                        <li><a href="#">Holiday Recipes from Around the World</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-3">
+
+                            <!-- inside tab -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <!-- Vertical Tabs Links -->
+                                        <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
+                                            <li class="nav-item active" role="presentation" id="tab1-tab"
+                                                data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab"
+                                                aria-controls="tab1" aria-selected="true">
+                                                <a href="#">Fresh Fruit & Vegetables</a>
+                                            </li>
+
+                                            <li class="nav-item" role="presentation" id="tab2-tab" data-bs-toggle="tab"
+                                                data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2"
+                                                aria-selected="false">
+                                                <a href="#">Meat</a>
+                                            </li>
+
+                                            <li class="nav-item" role="presentation" id="tab3-tab" data-bs-toggle="tab"
+                                                data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3"
+                                                aria-selected="false">
+                                                <a href="#">Seafood</a>
+                                            </li>
+
+                                            <li class="nav-item" role="presentation" id="tab4-tab" data-bs-toggle="tab"
+                                                data-bs-target="#tab4" type="button" role="tab" aria-controls="tab4"
+                                                aria-selected="false">
+                                                <a href="#">Deli</a>
+                                            </li>
+
+                                            <li class="nav-item" role="presentation" id="tab5-tab" data-bs-toggle="tab"
+                                                data-bs-target="#tab5" type="button" role="tab" aria-controls="tab5"
+                                                aria-selected="false">
+                                                <a href="#">Bakery</a>
+                                            </li>
+
+                                            <li class="nav-item" role="presentation" id="tab6-tab" data-bs-toggle="tab"
+                                                data-bs-target="#tab6" type="button" role="tab" aria-controls="tab6"
+                                                aria-selected="false">
+                                                <a href="#">Order Cakes, Platters & More</a>
+                                            </li>
+
+                                            <li class="nav-item" role="presentation" data-bs-toggle="tab" id="tab7-tab"
+                                                data-bs-target="#tab7" type="button" role="tab" aria-controls="tab7"
+                                                aria-selected="false">
+                                                <a href="#">Floral</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <!-- Tab Content -->
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="tab1" role="tabpanel"
+                                                aria-labelledby="tab1-tab">
+
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Fresh Fruit & Vegetables</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Everything for Game Day</a></li>
+                                                            <li><a href="#">Fresh Fruit</a></li>
+                                                            <li><a href="#">Fresh Vegetables</a></li>
+                                                            <li><a href="#">Fresh Herbs</a></li>
+                                                            <li><a href="#">Organic Produce</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Packaged</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Salads</a></li>
+                                                            <li><a href="#">Dressings & Dips</a></li>
+                                                            <li><a href="#">Fresh-cut Fruit & Vegetables</a></li>
+                                                            <li><a href="#">Packaged Produce</a></li>
+                                                            <li><a href="#">Party Trays</a></li>
+                                                            <li><a href="#">Fresh Juice & Smoothies</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Shop All Produce</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                        </ul>
+                                                    </div>
+
+
+                                                </div>
+
+
+                                            </div>
+                                            <div class="tab-pane fade" id="tab2" role="tabpanel"
+                                                aria-labelledby="tab2-tab">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Fresh Meat</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Beef</a></li>
+                                                            <li><a href="#">Chicken</a></li>
+                                                            <li><a href="#">Pork & Ham</a></li>
+                                                            <li><a href="#">Turkey</a></li>
+                                                            <li><a href="#">Lamb, Veal & Bison</a></li>
+                                                            <li><a href="#">Specialty Meat</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Prepared & Packaged Meat</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Bacon & Breakfast Sausage</a></li>
+                                                            <li><a href="#">Packaged & Sliced Deli Meat</a></li>
+                                                            <li><a href="#">Dinner Sausage</a></li>
+                                                            <li><a href="#">Heat & Serve Meals & Sides</a></li>
+                                                            <li><a href="#">Hot Dogs & Franks</a></li>
+                                                            <li><a href="#">Pepperoni, Salami & Summer Sausage</a></li>
+                                                            <li><a href="#">Frozen Meat</a></li>
+                                                            <li><a href="#">Ready-to-cook</a></li>
+                                                            <li><a href="#">Lunch & Snack Kits</a></li>
+                                                            <li><a href="#">Canned Meat</a></li>
+                                                            <li><a href="#">Enhancements</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Meat Alternatives</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Plant-based Meat</a></li>
+                                                            <li><a href="#">Frozen Meatless Choices</a></li>
+                                                        </ul>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab3" role="tabpanel"
+                                                aria-labelledby="tab3-tab">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Fresh Seafood</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shrimp</a></li>
+                                                            <li><a href="#">Wild-caught Fillets</a></li>
+                                                            <li><a href="#">Crab & Shellfish</a></li>
+                                                            <li><a href="#">Farm-raised Fillets</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Prepared & Packaged Seafood</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Frozen Seafood</a></li>
+                                                            <li><a href="#">Breaded Fish</a></li>
+                                                            <li><a href="#">Breaded Shrimp</a></li>
+                                                            <li><a href="#">Smoked Salmon</a></li>
+                                                            <li><a href="#">Seafood Salads & Dips</a></li>
+                                                            <li><a href="#">Canned Seafood</a></li>
+                                                            <li><a href="#">Seafood Meal Kits</a></li>
+                                                            <li><a href="#">Sauce & Breading</a></li>
+                                                            <li><a href="#">Sushi</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Shop All Seafood</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab4" role="tabpanel"
+                                                aria-labelledby="tab4-tab">
+                                                <div class="row">
+                                                    <div class="col-lg">
+                                                        <div class="fw-semibold my-2">Deli</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                            <li><a href="#">Fresh Deli Meats</a></li>
+                                                            <li><a href="#">Fresh Deli Cheeses</a></li>
+                                                            <li><a href="#">Chicken & Hot Meals</a></li>
+                                                            <li><a href="#">Specialty Cheeses</a></li>
+                                                            <li><a href="#">Olives, Dips, Spreads & Snacks</a></li>
+                                                            <li><a href="#">Packaged Deli Meats</a></li>
+                                                            <li><a href="#">Packaged Deli Cheeses</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg">
+                                                        <div class="fw-semibold my-2">Prepared Meals & Sides</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Ready-to-heat Meals & Soups</a></li>
+                                                            <li><a href="#">Cold Side Dishes</a></li>
+                                                            <li><a href="#">Grab & Go Meals</a></li>
+                                                            <li><a href="#">Party Platters</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab5" role="tabpanel"
+                                                aria-labelledby="tab5-tab">
+                                                <div class="row">
+                                                    <div class="col-lg">
+                                                        <div class="fw-semibold my-2">Shop All Bakery</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg">
+                                                        <div class="fw-semibold my-2">Cakes & Sweets</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Cakes & Cupcakes</a></li>
+                                                            <li><a href="#">Donuts, Danishes & Muffins</a></li>
+                                                            <li><a href="#">Cookies</a></li>
+                                                            <li><a href="#">Brownies</a></li>
+                                                            <li><a href="#">Pies</a></li>
+                                                            <li><a href="#">Angel Food, Pound & Pudding Cakes</a></li>
+                                                            <li><a href="#">Cheesecakes</a></li>
+                                                            <li><a href="#">Sweet Goods & Snacks</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg">
+                                                        <div class="fw-semibold my-2">Bread</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Artisan Bread</a></li>
+                                                            <li><a href="#">Sandwich Bread, Buns and Rolls</a></li>
+                                                            <li><a href="#">Dinner Bread & Rolls</a></li>
+                                                            <li><a href="#">Breakfast Breads</a></li>
+                                                            <li><a href="#">Bread by Lifestyle</a></li>
+                                                            <li><a href="#">Specialty Breads & Rolls</a></li>
+                                                            <li><a href="#">Specialty Butters & Spreads</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab6" role="tabpanel"
+                                                aria-labelledby="tab6-tab">
+                                                <div class="row">
+                                                    <div class="col-lg">
+                                                        <div class="fw-semibold my-2">Order Cakes, Platters & More</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#"> Place an Order</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab7" role="tabpanel"
+                                                aria-labelledby="tab7-tab">
+                                                <div class="row">
+                                                    <div class="col-lg">
+                                                        <div class="fw-semibold my-2">The Floral Shop</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg">
+                                                        <div class="fw-semibold my-2">Floral Order Ahead</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Place Your Order</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- inside tab end -->
+
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-4">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Beer & Seltzers</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Domestic & Imported Beer</a></li>
+                                        <li><a href="#">Craft Beer</a></li>
+                                        <li><a href="#">Hard Seltzers & Ready to Drink</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Wine</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Red Wine</a></li>
+                                        <li><a href="#">White Wine</a></li>
+                                        <li><a href="#">Rose & Blush Wine</a></li>
+                                        <li><a href="#">Champagne & Sparkling Wine</a></li>
+                                        <li><a href="#">Box Wine</a></li>
+                                        <li><a href="#">Dessert & Vermouth Wine</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Liquor</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Shop Liquor</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Non-Alcoholic Beer & Wine</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Shop Non-Alcoholic Beer & Wine</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Beer, Wine & Liquor</div>
+                                    <ul class="p-0">
+                                        <li><a href="#"> Shop All</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-5">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Football</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Everything for Game Day</a></li>
+                                        <li><a href="#">Football Snacks & Apps</a></li>
+                                        <li><a href="#">Football Beverages</a></li>
+                                        <li><a href="#">Easy Tailgating Recipes</a></li>
+                                        <li><a href="#">Order Ahead for Tailgating</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Thanksgiving</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Save on Turkeys & More</a></li>
+                                        <li><a href="#">Thanksgiving Sides</a></li>
+                                        <li><a href="#">Budget-friendly Thanksgiving Ideas</a></li>
+                                        <li><a href="#">Tools & Gadgets​</a></li>
+                                        <li><a href="#">Order Ahead for Thanksgiving</a></li>
+                                        <li><a href="#">Desserts & Baked Goods</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Black Friday</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Score Black Friday Deals All Month Long</a></li>
+                                        <li><a href="#">Up to 50% Off Toys</a></li>
+                                        <li><a href="#">Electronics</a></li>
+                                        <li><a href="#">Up to 50% Off Home Decor & More</a></li>
+                                        <li><a href="#">Exclusive Pickup & Delivery Deals</a></li>
+                                        <li><a href="#">Deals Shipped to Your Door</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Holiday Gifts & Décor</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Your Holiday Gift Guide​</a></li>
+                                        <li><a href="#">Toys​</a></li>
+                                        <li><a href="#">Candy</a></li>
+                                        <li><a href="#">Stocking Stuffers</a></li>
+                                        <li><a href="#">Holiday Decorations</a></li>
+                                        <li><a href="#">Gift Cards</a></li>
+                                        <li><a href="#">Give the Gift of Boost</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fw-semibold my-2">Holiday Meals</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Holiday Meal Must-haves</a></li>
+                                        <li><a href="#">Apps & Sides</a></li>
+                                        <li><a href="#">Baking Essentials</a></li>
+                                        <li><a href="#">Cookie Recipes</a></li>
+                                        <li><a href="#">Holiday Drinks</a></li>
+                                        <li><a href="#">Order Ahead for the Holidays</a></li>
+                                        <li><a href="#">Holiday Recipes from Around the World</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-6">
+                            <!-- inside tab -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <!-- Vertical Tabs Links -->
+                                        <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
+                                            <li class="nav-item active" role="presentation" id="tab01-tab"
+                                                data-bs-toggle="tab" data-bs-target="#tab01" type="button" role="tab"
+                                                aria-controls="tab01" aria-selected="true">
+                                                <a href="#"> Health & Wellness</a>
+                                            </li>
+                                            <li class="nav-item " role="presentation" id="tab02-tab"
+                                                data-bs-toggle="tab" data-bs-target="#tab02" type="button" role="tab"
+                                                aria-controls="tab02" aria-selected="true">
+                                                <a href="#"> Personal Care</a>
+                                            </li>
+                                            <li class="nav-item " role="presentation" id="tab03-tab"
+                                                data-bs-toggle="tab" data-bs-target="#tab03" type="button" role="tab"
+                                                aria-controls="tab03" aria-selected="true">
+                                                <a href="#"> Beauty</a>
+                                            </li>
+                                            <li class="nav-item " role="presentation" id="tab04-tab"
+                                                data-bs-toggle="tab" data-bs-target="#tab04" type="button" role="tab"
+                                                aria-controls="tab04" aria-selected="true">
+                                                <a href="#"> Baby</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <!-- Tab Content -->
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="tab01" role="tabpanel"
+                                                aria-labelledby="tab1-tab">
+
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Medicines & Treatments</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Pickup & Delivery Cold Medicine</a></li>
+                                                            <li><a href="#">Cold, Cough & Flu</a></li>
+                                                            <li><a href="#">Allergy & Sinus</a></li>
+                                                            <li><a href="#">Pain & Fever</a></li>
+                                                            <li><a href="#">Children's Medicine</a></li>
+                                                            <li><a href="#">Energy & Stimulants</a></li>
+                                                            <li><a href="#">Weight Management & Nutrition</a></li>
+                                                            <li><a href="#">Digestive Health & Nausea</a></li>
+                                                            <li><a href="#">Immune Support</a></li>
+                                                            <li><a href="#">Sleep Aids</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Vitamins & Supplements</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                            <li><a href="#">Multivitamins</a></li>
+                                                            <li><a href="#">Letter Vitamins</a></li>
+                                                            <li><a href="#">Children's Vitamins</a></li>
+                                                            <li><a href="#">Minerals</a></li>
+                                                            <li><a href="#">Herbal Supplements</a></li>
+                                                            <li><a href="#">Diet & Nutrition</a></li>
+                                                            <li><a href="#">Natural & Organic</a></li>
+                                                            <li><a href="#">Prenatal & Postnatal Vitamins</a></li>
+                                                            <li><a href="#">Joint Health</a></li>
+                                                            <li><a href="#">Fish Oils & Omegas</a></li>
+                                                            <li><a href="#">Hair, Skin & Nails</a></li>
+                                                            <li><a href="#">CoQ-10</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">First Aid & Care</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">First Aid</a></li>
+                                                            <li><a href="#">Foot Care</a></li>
+                                                            <li><a href="#">Eye Care</a></li>
+                                                            <li><a href="#">Home Healthcare Solutions</a></li>
+                                                            <li><a href="#">Sexual Health</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Health & Wellness</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade show" id="tab02" role="tabpanel"
+                                                aria-labelledby="tab1-tab">
+
+                                                <div class="row">
+                                                    <div class="col-lg">
+                                                        <div class="fw-semibold my-2">Personal Care</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                            <li><a href="#">Hair Care</a></li>
+                                                            <li><a href="#">Oral Care</a></li>
+                                                            <li><a href="#">Body Lotion</a></li>
+                                                            <li><a href="#">Bath & Shower</a></li>
+                                                            <li><a href="#">Feminine Care</a></li>
+                                                            <li><a href="#">Hand Soap & Sanitizers</a></li>
+                                                            <li><a href="#">Deodorants</a></li>
+                                                            <li><a href="#">Incontinence</a></li>
+                                                            <li><a href="#">Shaving & Grooming</a></li>
+
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade show" id="tab03" role="tabpanel"
+                                                aria-labelledby="tab1-tab">
+
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Hair Care</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shampoo</a></li>
+                                                            <li><a href="#">Conditioner</a></li>
+                                                            <li><a href="#">Hair Color</a></li>
+                                                            <li><a href="#">Hair Styling Tools & Appliances</a></li>
+                                                            <li><a href="#">Hair Brushes & Accessories</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Face & Skin Care</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Facial Treatments</a></li>
+                                                            <li><a href="#">Facial Moisturizers</a></li>
+                                                            <li><a href="#">Face Masks</a></li>
+                                                            <li><a href="#">Makeup Remover</a></li>
+                                                            <li><a href="#">Bath & Shower</a></li>
+                                                            <li><a href="#">Sun & Tanning</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Makeup & Accessories</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Eyes</a></li>
+                                                            <li><a href="#">Face</a></li>
+                                                            <li><a href="#">Lips</a></li>
+                                                            <li><a href="#">Nails</a></li>
+                                                            <li><a href="#">Makeup Tools & Brushes</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Fragrance</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Beauty</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade show" id="tab04" role="tabpanel"
+                                                aria-labelledby="tab1-tab">
+
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Baby</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">shop all</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Food Formula & Nursing</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                            <li><a href="#">Baby Food & Snacks</a></li>
+                                                            <li><a href="#">Baby Formula</a></li>
+                                                            <li><a href="#">Baby & Toddler Beverages</a></li>
+                                                            <li><a href="#">Bottle Feeding, Pacifiers & Teethers</a>
+                                                            </li>
+                                                            <li><a href="#">Nursing</a></li>
+                                                            <li><a href="#">Burp Cloths & Bibs</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Baby Essentials</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Diapers & Training Pants</a></li>
+                                                            <li><a href="#">Wipes & Diaper Essentials</a></li>
+                                                            <li><a href="#">Body & Hair Care</a></li>
+                                                            <li><a href="#">Health & Safety</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Nursery & Baby Gear</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Baby Car Seats, Strollers & Travel Gear</a>
+                                                            </li>
+                                                            <li><a href="#">Nursery Furniture, Bedding & Decor</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- inside tab end -->
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-7">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Laundry</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Laundry Detergent Pods</a></li>
+                                        <li><a href="#">Liquid Laundry Detergent</a></li>
+                                        <li><a href="#">Powder Laundry Detergent</a></li>
+                                        <li><a href="#">Fabric Softener</a></li>
+                                        <li><a href="#">Dryer Sheets</a></li>
+                                        <li><a href="#">Scent Boosters</a></li>
+                                        <li><a href="#">Bleach</a></li>
+                                        <li><a href="#">Stain Remover</a></li>
+                                        <li><a href="#">Laundry Sanitizer</a></li>
+                                        <li><a href="#">Fabric Refreshers</a></li>
+                                        <li><a href="#">Free & Clear Laundry</a></li>
+                                        <li><a href="#">Baby Laundry</a></li>
+                                        <li><a href="#">Laundry Supplies</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Paper Products</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Paper Towels</a></li>
+                                        <li><a href="#">Toilet Paper</a></li>
+                                        <li><a href="#">Flushable Wipes</a></li>
+                                        <li><a href="#">Facial Tissue</a></li>
+                                        <li><a href="#">Bulk Paper Products</a></li>
+                                        <li><a href="#">Hand Wipes</a></li>
+                                        <li><a href="#">Natural & Organic</a></li>
+                                        <li><a href="#">Napkins</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Kitchen</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Dishwashing Needs</a></li>
+                                        <li><a href="#">Food Storage</a></li>
+                                        <li><a href="#">Disposable Tableware</a></li>
+                                        <li><a href="#">Baking Paper & Foils</a></li>
+                                        <li><a href="#">Water Filtration</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Cleaning Supplies</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Wipes & Cleaning Supplies</a></li>
+                                        <li><a href="#">Cleaning Tools</a></li>
+                                        <li><a href="#">Kitchen Cleaners</a></li>
+                                        <li><a href="#">All-Purpose Cleaners</a></li>
+                                        <li><a href="#">Bathroom Cleaners</a></li>
+                                        <li><a href="#">Carpet & Floor Cleaners</a></li>
+                                        <li><a href="#">Glass Cleaners</a></li>
+                                        <li><a href="#">Dusters</a></li>
+                                        <li><a href="#">Mops</a></li>
+                                        <li><a href="#">Furniture Cleaner</a></li>
+                                        <li><a href="#">Brooms & Dust Pans</a></li>
+                                        <li><a href="#">Drain Cleaners</a></li>
+                                        <li><a href="#">Natural Cleaners</a></li>
+                                        <li><a href="#">Bulk Cleaning Supplies</a></li>
+                                        <li><a href="#">Pet Cleaning Supplies</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Cleaning & Household</div>
+                                    <ul>
+                                        <li><a href="#">Shop All</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-content my-0 active" id="content-select-8">
+                            <!-- inside tab -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+
+
+
+                                        <!-- Vertical Tabs Links -->
+                                        <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
+                                            <li class="nav-item active" role="presentation" id="tab001-tab"
+                                                data-bs-toggle="tab" data-bs-target="#tab001" type="button" role="tab"
+                                                aria-controls="tab001" aria-selected="true">
+                                                <a href="#"> Kitchen & Dining</a>
+                                            </li>
+                                            <li class="nav-item " role="presentation" id="tab002-tab"
+                                                data-bs-toggle="tab" data-bs-target="#tab002" type="button" role="tab"
+                                                aria-controls="tab002" aria-selected="true">
+                                                <a href="#"> Home</a>
+                                            </li>
+                                            <li class="nav-item " role="presentation" id="tab003-tab"
+                                                data-bs-toggle="tab" data-bs-target="#tab003" type="button" role="tab"
+                                                aria-controls="tab003" aria-selected="true">
+                                                <a href="#"> Electronics</a>
+                                            </li>
+                                            <li class="nav-item " role="presentation" id="tab004-tab"
+                                                data-bs-toggle="tab" data-bs-target="#tab004" type="button" role="tab"
+                                                aria-controls="tab004" aria-selected="true">
+                                                <a href="#"> Garden & Patio</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <!-- Tab Content -->
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="tab001" role="tabpanel"
+                                                aria-labelledby="tab1-tab">
+
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Kitchen</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Kitchen Appliances</a></li>
+                                                            <li><a href="#">Kitchen Gadgets</a></li>
+                                                            <li><a href="#">Coffee & Tea Supplies</a></li>
+                                                            <li><a href="#">Thermal & Water Bottles</a></li>
+                                                            <li><a href="#">Cutlery & Knives</a></li>
+                                                            <li><a href="#">Cookware</a></li>
+                                                            <li><a href="#">Bakeware</a></li>
+                                                            <li><a href="#">Kitchen Linens</a></li>
+                                                            <li><a href="#">Kitchen Maintenance</a></li>
+                                                            <li><a href="#">Reusable Bags & Totes</a></li>
+                                                            <li><a href="#">Kitchen Organization</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Dining & Entertaining</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Glassware & Drinkware</a></li>
+                                                            <li><a href="#">Dinnerware</a></li>
+                                                            <li><a href="#">Serveware</a></li>
+                                                            <li><a href="#">Bar & Wine Accessories</a></li>
+                                                            <li><a href="#">Flatware</a></li>
+                                                            <li><a href="#">Table Linens</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Kitchen & Dining</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                        </ul>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="tab002" role="tabpanel"
+                                                aria-labelledby="tab1-tab">
+
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Home Furnishings & Decor</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Furniture</a></li>
+                                                            <li><a href="#">Candles</a></li>
+                                                            <li><a href="#">Pillows & Throws</a></li>
+                                                            <li><a href="#">Floor Coverings</a></li>
+                                                            <li><a href="#">Decorative Accessories</a></li>
+                                                            <li><a href="#">Wall Art</a></li>
+                                                            <li><a href="#">Curtains</a></li>
+                                                            <li><a href="#">Curtain Rods & Hardware</a></li>
+                                                            <li><a href="#">Rugs</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Bedding</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Kids Bedding</a></li>
+                                                            <li><a href="#">Mattresses, Pads & Toppers</a></li>
+                                                            <li><a href="#">Sheets & Pillowcases</a></li>
+                                                            <li><a href="#">Quilts</a></li>
+                                                            <li><a href="#">Blankets</a></li>
+                                                            <li><a href="#">Comforter Sets</a></li>
+                                                            <li><a href="#">Duvet Covers</a></li>
+                                                            <li><a href="#">Pillows</a></li>
+                                                            <li><a href="#">Bedding Accessories</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Bath</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Bath Towels & Rugs</a></li>
+                                                            <li><a href="#">Bathroom Accessories</a></li>
+                                                            <li><a href="#">Bathroom Hardware</a></li>
+                                                            <li><a href="#">Shower</a></li>
+                                                            <li><a href="#">Bathroom Furniture</a></li>
+                                                            <li><a href="#">Bathroom Storage</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Home Essentials</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Batteries</a></li>
+                                                            <li><a href="#">Light Bulbs</a></li>
+                                                            <li><a href="#">Storage Solutions</a></li>
+                                                            <li><a href="#">School & Office</a></li>
+                                                            <li><a href="#">Crafts & Hobbies</a></li>
+                                                            <li><a href="#">Home Improvement</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Home</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                        </ul>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="tab003" role="tabpanel"
+                                                aria-labelledby="tab1-tab">
+
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">TV & Video</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">TVs & Home Theater</a></li>
+                                                            <li><a href="#">Blu-Rays & DVDs</a></li>
+                                                            <li><a href="#">Streaming</a></li>
+                                                            <li><a href="#">Video Accessories & Consoles</a></li>
+                                                            <li><a href="#">Video Games</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Audio</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Headphones</a></li>
+                                                            <li><a href="#">Speakers & Soundbars</a></li>
+                                                            <li><a href="#">Audio & MP3 Players</a></li>
+                                                            <li><a href="#">Vinyl</a></li>
+                                                            <li><a href="#">Turntables</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Computers & Office</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Computers, Laptops & Tablets</a></li>
+                                                            <li><a href="#">Computer Supplies & Accessories</a></li>
+                                                            <li><a href="#">Printers & Supplies</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">More Electronics</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Connected Home</a></li>
+                                                            <li><a href="#">Fitness</a></li>
+                                                            <li><a href="#">Cameras & Camcorders</a></li>
+                                                            <li><a href="#">Phones</a></li>
+                                                            <li><a href="#">Cell Accessories</a></li>
+                                                            <li><a href="#">Electronics for Kids</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Electronics</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                        </ul>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="tab004" role="tabpanel"
+                                                aria-labelledby="tab1-tab">
+
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="fw-semibold my-2">Garden & Patio</div>
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Shop All</a></li>
+                                                            <li><a href="#">Grills & Outdoor Cooking</a></li>
+                                                            <li><a href="#">Lawn & Garden</a></li>
+                                                            <li><a href="#">Patio Furniture</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- inside tab end -->
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-9">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Shop All Pet</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Shop All Pet</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Dog</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Dry Dog Food</a></li>
+                                        <li><a href="#">Wet Dog Food</a></li>
+                                        <li><a href="#">Frozen & Refrigerated Dog Food</a></li>
+                                        <li><a href="#">Dog Treats</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Cat</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Dry Cat Food</a></li>
+                                        <li><a href="#">Wet Cat Food</a></li>
+                                        <li><a href="#">Frozen & Refrigerated Cat Food</a></li>
+                                        <li><a href="#">Cat Treats</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Small Pet</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Aquarium Needs</a></li>
+                                        <li><a href="#">Small Pet</a></li>
+                                        <li><a href="#">Bird Care</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Supplies & Toys</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Pet Toys</a></li>
+                                        <li><a href="#">Litter & Potty</a></li>
+                                        <li><a href="#">Grooming & Wellness</a></li>
+                                        <li><a href="#">Pet Supplies</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-10">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Grocery & More</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Shop All Our Brands</a></li>
+                                        <li><a href="#">Kroger Brand</a></li>
+                                        <li><a href="#">Kroger Mercado</a></li>
+                                        <li><a href="#">Simple Truth®</a></li>
+                                        <li><a href="#">Private Selection®</a></li>
+                                        <li><a href="#">Smart Way</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Fresh</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Home Chef</a></li>
+                                        <li><a href="#">Murray's Cheese</a></li>
+                                        <li><a href="#">Heritage Farm</a></li>
+                                        <li><a href="#">Bakery Fresh</a></li>
+                                        <li><a href="#">Bloom Haus™</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Pet</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Abound</a></li>
+                                        <li><a href="#">Pet Pride</a></li>
+                                        <li><a href="#">Luvsome</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Baby & Clothing</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Comforts</a></li>
+                                        <li><a href="#">Dip</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-11">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Top Marketplace Categories</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Shop All</a></li>
+                                        <li><a href="#">Furniture</a></li>
+                                        <li><a href="#">Grocery</a></li>
+                                        <li><a href="#">Beauty & Hair Care</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold my-2">Shop By Partner Brand</div>
+                                    <ul class="p-0">
+                                        <li><a href="#">Home Chef</a></li>
+                                        <li><a href="#">Vitacost</a></li>
+                                        <li><a href="#">Murray's Cheese</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tabs Content End -->
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- shop dropdown end -->
+
+
+    <br>
     <!-- home slider -->
     <section class="home-slider">
         <div class="container">
@@ -206,8 +1443,6 @@
         </div>
     </section>
 
-
-
     <section class="bg-light py-3">
         <div class="container">
             <div class="fw-bold fs-5 my-3">Shop by Categories</div>
@@ -255,7 +1490,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="bg-light py-3">
         <div class="container">
@@ -356,7 +1590,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="bg-light py-3">
         <div class="container">
@@ -511,7 +1744,6 @@
         </div>
     </section>
 
-
     <section class="bg-light py-3">
         <div class="container">
             <div class="row gap-lg-0 gap-md-0 gap-3">
@@ -532,8 +1764,6 @@
             </div>
         </div>
     </section>
-
-
 
     <section class="bg-light py-3">
         <div class="container">
@@ -658,7 +1888,6 @@
         </div>
     </section>
 
-
     <section class="bg-light py-3">
         <div class="container">
             <div class="row">
@@ -753,8 +1982,6 @@
             </div>
         </div>
     </section>
-
-
 
     <section class="bg-light py-3">
         <div class="container">
@@ -851,7 +2078,6 @@
         </div>
     </section>
 
-
     <section class="bg-light py-3">
         <div class="container">
             <div class="row gap-lg-0 gap-md-0 gap-3">
@@ -879,7 +2105,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="bg-light py-3">
         <div class="container">
@@ -1071,9 +2296,6 @@
         </div>
     </section>
 
-
-
-
     <section class="bg-light py-3">
         <div class="container">
             <div class="fw-bold fs-5 my-3">Exclusive Discounts</div>
@@ -1234,7 +2456,6 @@
         </div>
     </section>
 
-
     <section class="bg-light py-3">
 
         <div class="text-center fw-bold fs-3 mb-4">Why shop with us?</div>
@@ -1271,8 +2492,6 @@
             </div>
         </div>
     </section>
-
-
 
     <footer class="">
         <div class="container py-5 px-lg-2 px-md-2 px-4">
@@ -1357,6 +2576,21 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
+        $(".tab-list li").on("click", function () {
+            var tabId = ".tab-list li#" + $(this).attr("id");
+            var tabDivId = ".tabs-content#content-" + $(this).attr("id");
+
+            if (!$(this).hasClass("active")) {
+                $(".tab-list li").removeClass("active");
+                $(this).addClass("active");
+
+                $(".tabs-content").removeClass("active");
+                $(tabDivId).addClass("active");
+            }
+        });
+
+
+
         $('.responsive').slick({
             dots: true,
             infinite: false,

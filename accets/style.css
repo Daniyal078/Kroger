@@ -25,10 +25,11 @@ body {
 }
 
 
-.slick-next:before{
+.slick-next:before {
     content: '▶️ ' !important;
 }
-.slick-prev:before{
+
+.slick-prev:before {
     content: '◀️' !important;
 }
 
@@ -42,4 +43,12 @@ li {
 
 .hov-img:hover {
     transform: scale(1.1);
+}
+
+
+
+@media screen and (max-width:500px) {
+    .fs-resp{
+        font-size: x-small;
+    }
 }
