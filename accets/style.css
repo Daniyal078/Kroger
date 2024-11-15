@@ -45,7 +45,40 @@ li {
     transform: scale(1.1);
 }
 
+.pointer{
+    cursor: pointer;
+}
 
+.cart-sidebar {
+    width: 350px;
+    padding: 10px 12px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -1000%;
+    height: 100vh;
+    z-index: 4;
+    transition: 0.5s;
+}
+
+.mask {
+    width: 100%;
+    height: 100vh;
+    background-color: #0000007a;
+    position: fixed;
+    display: none;
+    z-index: 1;
+}
+
+.text-overflow {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 @media screen and (max-width:500px) {
     .fs-resp{
