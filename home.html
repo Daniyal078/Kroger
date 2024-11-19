@@ -19,336 +19,729 @@
 </head>
 
 <style>
-    .home-slider .slick-dots {
-        bottom: 10px;
-    }
-
-    /* tabs */
-    .tabs {
-        padding-top: 7%
-    }
-
-    .tab-list {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .tab-list>li {
-        padding: 3% 3%;
-        float: left;
-        cursor: pointer;
-    }
-
-    .tab-list>li:first-child {
-        border-left: none;
-    }
-
-    .inside .tab-list>li:first-child {
-        background-color: #0070fc;
-        color: #fff;
-    }
-
-    .tab-list>li:hover {
-        text-decoration: underline;
-    }
-
-
-    .tab-list>li.active {
-        color: #ffffff;
-        background-color: #0070fc;
-        background-color: #0070fc;
-        padding: 3% 5%;
-    }
-
-    .inside .tab-list>li.active {
-        color: #ffffff;
-        background-color: #0070fc;
-        padding: 3% 5%;
-    }
-
-    .tab-list>li>h3 {
-        font-weight: 100;
-        display: block;
-        transition: all 500ms ease;
-    }
-
-    .tabs-content {
-        opacity: 0;
-        display: none;
-        margin: 3em 0;
-    }
-
-
-    .tabs-content.active {
-        opacity: 1;
-        display: block;
-    }
-
-    .inside .tabs-content.active {
-        opacity: 1;
-        display: block;
-    }
-
-    .tab-list>li.active:after {
-        content: "";
-        border-top: 0 solid transparent;
-        border-left: 13px solid transparent;
-        clear: both;
-        display: inline-block;
-        transform: rotate(-45deg);
-        margin-right: -20px;
-        margin-top: 4px;
-        float: right;
-        border-bottom: 13px solid #0070fc;
-        /* border-bottom: 13px solid #000; */
-    }
-
-    .tabs-content>div>i {
-        font-size: 65px;
-        float: left;
-        display: block;
-        margin-top: 10px;
-    }
-
-    .tabs-content>div>article {
-        float: right;
-        width: 80%;
-    }
-
-    .tabs-content>div>article h3 {
-        font-weight: bold;
-    }
-
-    /* Bar Set Style */
-    .tab-header {
-        margin: 0 0 1em;
-    }
-
-    .tab-header h3 {
-        font-size: 20px;
-        text-transform: uppercase;
-    }
-
-
-    .tabs-content li {
-        margin: 5px 0px;
-    }
-
-    .tabs-content li:hover {
-        text-decoration: underline;
-    }
-
-
-    .nav-tabs li {
-        padding: 3% 5%;
-        margin: 0;
-    }
-
-    .nav-tabs li.active {
-        background-color: #0070fc;
-        padding: 3% 5%;
-        color: #fff;
-    }
-
-
-    .nav-tabs li.active:after {
-        content: "";
-        border-top: 0 solid transparent;
-        border-left: 13px solid transparent;
-        clear: both;
-        display: inline-block;
-        transform: rotate(-45deg);
-        margin-right: -20px;
-        margin-top: 4px;
-        float: right;
-        border-bottom: 13px solid #0070fc;
-        /* border-bottom: 13px solid #000; */
-    }
-
-    .shop-dropdown {
-        top: -1000%;
-        transition: 0.5s;
-    }
-
-
-    /* tabs end */
+   
 </style>
 
 
 <body>
     <div class="mask z-3"></div>
 
+
+    <div class="mob-search gap-3">
+        <div class="border border-dark d-flex align-items-center rounded px-3 gap-2 w-100">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input class="border-0 form-control px-0 py-2" type="text" placeholder="Search Products">
+        </div>
+        <i class="fa-regular fa-circle-xmark fs-3 mob-search-cut"></i>
+    </div>
+
+    <div class="cart-releated-product bg-body-secondary">
+        <div class="d-flex align-items-center justify-content-between p-3 bg-white">
+            <div></div>
+            <div class="fw-semibold text-pink">Products you might like</div>
+            <i class="fa-solid fa-arrow-right-long fs-5 cart-releated-product-close"></i>
+        </div>
+
+        <div class="p-3">
+            <div class="w-auto align-items-center border-bottom mb-3">
+                <div class="d-flex gap-2 bg-white p-2">
+                    <div class="position-relative">
+                        <img class="border" src="accets/image/product3.webp" alt="" width="80px" height="80px">
+                    </div>
+                    <div class="fw-semibold mx-2 w-100 d-flex justify-content-around flex-column">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-overflow text-primary">water bottle</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>$15.00</div>
+                            <button class="btn btn-dark btn-sm">+ ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-auto align-items-center border-bottom mb-3">
+                <div class="d-flex gap-2 bg-white p-2">
+                    <div class="position-relative">
+                        <img class="border" src="accets/image/product3.webp" alt="" width="80px" height="80px">
+                    </div>
+                    <div class="fw-semibold mx-2 w-100 d-flex justify-content-around flex-column">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-overflow text-primary">water bottle</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>$15.00</div>
+                            <button class="btn btn-dark btn-sm">+ ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-auto align-items-center border-bottom mb-3">
+                <div class="d-flex gap-2 bg-white p-2">
+                    <div class="position-relative">
+                        <img class="border" src="accets/image/product3.webp" alt="" width="80px" height="80px">
+                    </div>
+                    <div class="fw-semibold mx-2 w-100 d-flex justify-content-around flex-column">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-overflow text-primary">water bottle</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>$15.00</div>
+                            <button class="btn btn-dark btn-sm">+ ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-auto align-items-center border-bottom mb-3">
+                <div class="d-flex gap-2 bg-white p-2">
+                    <div class="position-relative">
+                        <img class="border" src="accets/image/product3.webp" alt="" width="80px" height="80px">
+                    </div>
+                    <div class="fw-semibold mx-2 w-100 d-flex justify-content-around flex-column">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-overflow text-primary">water bottle</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>$15.00</div>
+                            <button class="btn btn-dark btn-sm">+ ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-auto align-items-center border-bottom mb-3">
+                <div class="d-flex gap-2 bg-white p-2">
+                    <div class="position-relative">
+                        <img class="border" src="accets/image/product3.webp" alt="" width="80px" height="80px">
+                    </div>
+                    <div class="fw-semibold mx-2 w-100 d-flex justify-content-around flex-column">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-overflow text-primary">water bottle</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>$15.00</div>
+                            <button class="btn btn-dark btn-sm">+ ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="cart-sidebar shadow bg-white text-black">
         <div class="d-flex align-items-center justify-content-between">
             <div></div>
-            <div class="fw-bold fs-5 text-pink text-uppercase">Shopping Cart</div>
+            <div class="fw-semibold text-pink"><i class="fa-brands fa-opencart fs-4"></i> Your Cart</div>
             <i class="fa-regular my-2 fs-3 fa-circle-xmark sideNavClose cursor"></i>
         </div>
 
         <div class="cart-items overflow-y-auto px-3" style="height: 380px;">
             <div class="w-auto align-items-center border-bottom py-4">
-                <div class="d-flex align-items-center gap-2">
+                <div class="d-flex gap-2">
                     <div class="position-relative">
-                        <img class="border" src="accets/image/product3.webp" alt="" width="70px" height="70px">
-                        <div class="position-absolute bg-black rounded-circle text-white py-1 px-2 fs-xs lh-1"
-                            style="top: -10px; right: -5px;">1</div>
+                        <img class="border" src="accets/image/product3.webp" alt="" width="80px" height="80px">
                     </div>
-                    <div class="fw-semibold mx-2">
-                        <div>
-                            <div class="text-overflow">Roku Express 4K+ Streaming Player Roku Express 4K+ Streaming
-                                Player</div>
-                        </div>
-                        <div class="d-flex align-items-center my-1">
-                            <div class="d-flex align-items-center mt-2">
-                                <span class="">$300</span> &nbsp;&nbsp;&nbsp;
-                                <input type="number" class="w-50 ps-2" min="0" value="1" name="" id="">
-
+                    <div class="fw-semibold mx-2 w-100">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-overflow">water bottle</div>
+                            <div>
+                                <i class="fa-regular fa-trash-can d-block"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center h-100">
-                        <i class="fa-regular fa-trash-can mb-4"></i>
-                        <div>$600</div>
+                        <div class="text-muted my-1">price <span class="">$300</span></div>
+                        <div class="d-flex justify-content-between">
+                            <div class="quantity">
+                                <button class="minus" aria-label="Decrease">&minus;</button>
+                                <input type="number" class="input-box" value="1" min="1" max="10">
+                                <button class="plus" aria-label="Increase">&plus;</button>
+                            </div>
+                            <div>$600</div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="w-auto align-items-center border-bottom py-4">
-                <div class="d-flex align-items-center gap-2">
+                <div class="d-flex gap-2">
                     <div class="position-relative">
-                        <img class="border" src="accets/image/product3.webp" alt="" width="70px" height="70px">
-                        <div class="position-absolute bg-black rounded-circle text-white py-1 px-2 fs-xs lh-1"
-                            style="top: -10px; right: -5px;">1</div>
+                        <img class="border" src="accets/image/product3.webp" alt="" width="80px" height="80px">
                     </div>
-                    <div class="fw-semibold mx-2">
-                        <div>
-                            <div class="text-overflow">Roku Express 4K+ Streaming Player Roku Express 4K+ Streaming
-                                Player</div>
-                        </div>
-                        <div class="d-flex align-items-center my-1">
-                            <div class="d-flex align-items-center mt-2">
-                                <span class="">$300</span> &nbsp;&nbsp;&nbsp;
-                                <input type="number" class="w-50 ps-2" min="0" value="1" name="" id="">
-
+                    <div class="fw-semibold mx-2 w-100">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-overflow">water bottle</div>
+                            <div>
+                                <i class="fa-regular fa-trash-can d-block"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center h-100">
-                        <i class="fa-regular fa-trash-can mb-4"></i>
-                        <div>$600</div>
+                        <div class="text-muted my-1">price <span class="">$300</span></div>
+                        <div class="d-flex justify-content-between">
+                            <div class="quantity">
+                                <button class="minus" aria-label="Decrease">&minus;</button>
+                                <input type="number" class="input-box" value="1" min="1" max="10">
+                                <button class="plus" aria-label="Increase">&plus;</button>
+                            </div>
+                            <div>$600</div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="w-auto align-items-center border-bottom py-4">
-                <div class="d-flex align-items-center gap-2">
+                <div class="d-flex gap-2">
                     <div class="position-relative">
-                        <img class="border" src="accets/image/product3.webp" alt="" width="70px" height="70px">
-                        <div class="position-absolute bg-black rounded-circle text-white py-1 px-2 fs-xs lh-1"
-                            style="top: -10px; right: -5px;">1</div>
+                        <img class="border" src="accets/image/product3.webp" alt="" width="80px" height="80px">
                     </div>
-                    <div class="fw-semibold mx-2">
-                        <div>
-                            <div class="text-overflow">Roku Express 4K+ Streaming Player Roku Express 4K+ Streaming
-                                Player</div>
-                        </div>
-                        <div class="d-flex align-items-center my-1">
-                            <div class="d-flex align-items-center mt-2">
-                                <span class="">$300</span> &nbsp;&nbsp;&nbsp;
-                                <input type="number" class="w-50 ps-2" min="0" value="1" name="" id="">
-
+                    <div class="fw-semibold mx-2 w-100">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-overflow">water bottle</div>
+                            <div>
+                                <i class="fa-regular fa-trash-can d-block"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center h-100">
-                        <i class="fa-regular fa-trash-can mb-4"></i>
-                        <div>$600</div>
+                        <div class="text-muted my-1">price <span class="">$300</span></div>
+                        <div class="d-flex justify-content-between">
+                            <div class="quantity">
+                                <button class="minus" aria-label="Decrease">&minus;</button>
+                                <input type="number" class="input-box" value="1" min="1" max="10">
+                                <button class="plus" aria-label="Increase">&plus;</button>
+                            </div>
+                            <div>$600</div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="w-auto align-items-center border-bottom py-4">
-                <div class="d-flex align-items-center gap-2">
+                <div class="d-flex gap-2">
                     <div class="position-relative">
-                        <img class="border" src="accets/image/product3.webp" alt="" width="70px" height="70px">
-                        <div class="position-absolute bg-black rounded-circle text-white py-1 px-2 fs-xs lh-1"
-                            style="top: -10px; right: -5px;">1</div>
+                        <img class="border" src="accets/image/product3.webp" alt="" width="80px" height="80px">
                     </div>
-                    <div class="fw-semibold mx-2">
-                        <div>
-                            <div class="text-overflow">Roku Express 4K+ Streaming Player Roku Express 4K+ Streaming
-                                Player</div>
-                        </div>
-                        <div class="d-flex align-items-center my-1">
-                            <div class="d-flex align-items-center mt-2">
-                                <span class="">$300</span> &nbsp;&nbsp;&nbsp;
-                                <input type="number" class="w-50 ps-2" min="0" value="1" name="" id="">
-
+                    <div class="fw-semibold mx-2 w-100">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-overflow">water bottle</div>
+                            <div>
+                                <i class="fa-regular fa-trash-can d-block"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center h-100">
-                        <i class="fa-regular fa-trash-can mb-4"></i>
-                        <div>$600</div>
+                        <div class="text-muted my-1">price <span class="">$300</span></div>
+                        <div class="d-flex justify-content-between">
+                            <div class="quantity">
+                                <button class="minus" aria-label="Decrease">&minus;</button>
+                                <input type="number" class="input-box" value="1" min="1" max="10">
+                                <button class="plus" aria-label="Increase">&plus;</button>
+                            </div>
+                            <div>$600</div>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
 
-        <div class="d-flex justify-content-between py-3">
-            <div class="fw-bolder text-center fs-5">Subtotal:</div>
-            <div class="fw-semibold fs-5">$5,500.00</div>
+        <div class="d-flex justify-content-between py-1">
+            <div class="fw-semibold text-center">Subtotal</div>
+            <div class="fw-semibold text-muted">$205.00</div>
+        </div>
+        <div class="d-flex justify-content-between py-1">
+            <div class="fw-semibold text-center">Shipping</div>
+            <div class="fw-semibold text-muted">Free</div>
+        </div>
+        <div class="d-flex justify-content-between py-2 border-top">
+            <div class="fw-semibold text-center">Total</div>
+            <div class="fw-semibold text-muted">$205.00</div>
         </div>
 
-        <div class="text-center">
-            <a href="/Cart.html">
-                <button class="btn bg-primary text-white rounded-1 fw-bold btn-sm w-100 my-2 py-2 px-3 fs-6">View
-                    cart</button>
-            </a>
-            <a href="/Cart.html">
-                <button
-                    class="btn bg-primary text-white rounded-1 fw-bold btn-sm w-100 py-2 px-3 fs-6">Checkout</button>
-            </a>
+        <a href="/Cart.html">
+            <button class="btn bg-black text-white rounded-1 btn-sm w-100 py-2 px-3 fs-6">Checkout $205.00</button>
+        </a>
+    </div>
+
+
+    <!-- mobile side nav -->
+    <div class="mob-sidebar">
+        <div class="d-flex justify-content-end">
+            <i class="fa-regular fa-circle-left mob-sidebar-close mb-3 fs-4"></i>
+        </div>
+
+
+        <ul class="p-0 m-0">
+            <li class=" my-2 text-muted fw-semibold"><a href="#">Shop</a></li>
+            <li class=" my-2 text-muted fw-semibold"><a href="About.html">About Us</a></li>
+            <div class="accordion">
+                <input type="checkbox" id="question-2">
+                <label for="question-2" class="accordion__header" id="question-2">Pickup & Delivery</label>
+                <div class="accordion__content">
+                    <ul class="p-2">
+                        <li class="my-2"><a href="Free-pickup.html">Free Pickup</a></li>
+                        <li class="my-2"><a href="Kroger-Delivery.html">Kroger Delivery</a></li>
+                        <li class="my-2"><a href="All-Delivery-Options.html">All Delivery Options</a></li>
+                        <li class="my-2"><a href="Ship-to-Home.html">Ship to Home</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <li class=" my-2 text-muted fw-semibold"><a href="blog.html">Blogs</a></li>
+        </ul>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header bg-white border-bottom">
+                    <button class="accordion-button bg-white p-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Groceries
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body bg-white p-2">
+
+
+                        <div class="accordions indside">
+                            <div class="accordion">
+                                <input type="checkbox" id="question-1">
+                                <label for="question-1" class="accordion__header" id="question-1">Oil &
+                                    Ghee</label>
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li>Oil</li>
+                                        <li>Ghee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <input type="checkbox" id="question-2">
+                                <label for="question-2" class="accordion__header" id="question-2">Oil &
+                                    Ghee</label>
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li>Oil</li>
+                                        <li>Ghee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <input type="checkbox" id="question-3">
+                                <label for="question-3" class="accordion__header" id="question-3">Rice &
+                                    Flour</label>
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li>Oil</li>
+                                        <li>Ghee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <input type="checkbox" id="question-4">
+                                <label for="question-4" class="accordion__header" id="question-4">Grains &
+                                    Pulses</label>
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li>Oil</li>
+                                        <li>Ghee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <input type="checkbox" id="question-5">
+                                <label for="question-5" class="accordion__header" id="question-5">Salt,
+                                    Spices</label>
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li>Oil</li>
+                                        <li>Ghee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <input type="checkbox" id="question-6">
+                                <label for="question-6" class="accordion__header" id="question-6">Sugar &
+                                    Sweeteners</label>
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li>Oil</li>
+                                        <li>Ghee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <input type="checkbox" id="question-7">
+                                <label for="question-7" class="accordion__header" id="question-7">Ketchup,
+                                    Mayonnais</label>
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li>Oil</li>
+                                        <li>Ghee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <input type="checkbox" id="question-8">
+                                <label for="question-8" class="accordion__header" id="question-8">Canned &
+                                    Packaged Food</label>
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li>Oil</li>
+                                        <li>Ghee</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="accordion-item mt-4 border-top">
+                <h2 class="accordion-header bg-white border-bottom">
+                    <button class="accordion-button bg-white p-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        Groceries
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body bg-white p-2">
+                        <ol class="p-2">
+                            <li>
+                                <a href="#">Adam's</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Al Ameera</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">AL-Khubz</a>
+                                (9)
+                            </li>
+                            <li>
+                                <a href="#">Almarai</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Alshifa</a>
+                                (10)
+                            </li>
+                            <li>
+                                <a href="#">American Garden</a>
+                                (33)
+                            </li>
+                            <li>
+                                <a href="#">Ashrafi</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Asli Doodh</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Bake Parlor</a>
+                                (36)
+                            </li>
+                            <li>
+                                <a href="#">Barkat</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Borges</a>
+                                (7)
+                            </li>
+                            <li>
+                                <a href="#">Canderel</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Canolive</a>
+                                (4)
+                            </li>
+                            <li>
+                                <a href="#">Choco Bliss</a>
+                                (8)
+                            </li>
+                            <li>
+                                <a href="#">Coroli</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Crown</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Dalda</a>
+                                (14)
+                            </li>
+                            <li>
+                                <a href="#">Dashi</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Dawn</a>
+                                (19)
+                            </li>
+                            <li>
+                                <a href="#">Delmonte</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Dipitt</a>
+                                (18)
+                            </li>
+                            <li>
+                                <a href="#">Eva</a>
+                                (7)
+                            </li>
+                            <li>
+                                <a href="#">Falak</a>
+                                (25)
+                            </li>
+                            <li>
+                                <a href="#">Figaro</a>
+                                (28)
+                            </li>
+                            <li>
+                                <a href="#">French</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Freshmate</a>
+                                (17)
+                            </li>
+                            <li>
+                                <a href="#">Golden</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Guard</a>
+                                (17)
+                            </li>
+                            <li>
+                                <a href="#">Habib</a>
+                                (3)
+                            </li>
+                            <li>
+                                <a href="#">Hashmi</a>
+                                (4)
+                            </li>
+                            <li>
+                                <a href="#">Heinz</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Hellman's</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Hemani</a>
+                                (3)
+                            </li>
+                            <li>
+                                <a href="#">Hosen</a>
+                                (6)
+                            </li>
+                            <li>
+                                <a href="#">Hub Salt</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Italiano</a>
+                                (4)
+                            </li>
+                            <li>
+                                <a href="#">Jazaa</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">K&amp;N's</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Key</a>
+                                (12)
+                            </li>
+                            <li>
+                                <a href="#">Kikkoman</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Knorr</a>
+                                (14)
+                            </li>
+                            <li>
+                                <a href="#">Kolson</a>
+                                (12)
+                            </li>
+                            <li>
+                                <a href="#">Langnese</a>
+                                (10)
+                            </li>
+                            <li>
+                                <a href="#">Laziza</a>
+                                (4)
+                            </li>
+                            <li>
+                                <a href="#">Local</a>
+                                (24)
+                            </li>
+                            <li>
+                                <a href="#">Malka</a>
+                                (29)
+                            </li>
+                            <li>
+                                <a href="#">Mara</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Mehran</a>
+                                (26)
+                            </li>
+                            <li>
+                                <a href="#">Menu</a>
+                                (22)
+                            </li>
+                            <li>
+                                <a href="#">Mezan</a>
+                                (5)
+                            </li>
+                            <li>
+                                <a href="#">Mon Salwa </a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Mon Salwa</a>
+                                (10)
+                            </li>
+                            <li>
+                                <a href="#">Mother Choice</a>
+                                (3)
+                            </li>
+                            <li>
+                                <a href="#">Mundial</a>
+                                (6)
+                            </li>
+                            <li>
+                                <a href="#">Nando's</a>
+                                (5)
+                            </li>
+                            <li>
+                                <a href="#">National</a>
+                                (104)
+                            </li>
+                            <li>
+                                <a href="#">Nature's own</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Nawab's</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Olper's</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Opa</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Polac</a>
+                                (3)
+                            </li>
+                            <li>
+                                <a href="#">Puck</a>
+                                (4)
+                            </li>
+                            <li>
+                                <a href="#">Quality Food</a>
+                                (275)
+                            </li>
+                            <li>
+                                <a href="#">Rafhan</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Razmin</a>
+                                (5)
+                            </li>
+                            <li>
+                                <a href="#">Reem</a>
+                                (9)
+                            </li>
+                            <li>
+                                <a href="#">Reggia</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Rite</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Rossmoor</a>
+                                (8)
+                            </li>
+                            <li>
+                                <a href="#">Sabroso</a>
+                                (25)
+                            </li>
+                            <li>
+                                <a href="#">Santan</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Shahenshah</a>
+                                (10)
+                            </li>
+                            <li>
+                                <a href="#">Shan</a>
+                                (3)
+                            </li>
+                            <li>
+                                <a href="#">Shangrila</a>
+                                (34)
+                            </li>
+                            <li>
+                                <a href="#">Splenda</a>
+                                (1)
+                            </li>
+                            <li>
+                                <a href="#">Sufi</a>
+                                (27)
+                            </li>
+                            <li>
+                                <a href="#">Sugarie</a>
+                                (2)
+                            </li>
+                            <li>
+                                <a href="#">Sunridge</a>
+                                (10)
+                            </li>
+                            <li>
+                                <a href="#">Suree</a>
+                                (10)
+                            </li>
+                            <li>
+                                <a href="#">Young's</a>
+                                (27)
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </div>
+    <!-- mobile side nav end -->
 
 
     <nav class="navbar navbar-expand-lg bg-primary d-block p-0">
         <div class="container py-3">
             <div class="d-flex align-items-center gap-3">
-                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                <button class="navbar-toggler border-0 p-0" type="button" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars text-white"></i>
+                    <i class="fa-solid fa-bars text-white side-nav-tog"></i>
                 </button>
-                <i class="fa fa-search text-white d-lg-none d-block" aria-hidden="true"></i>
+                <i class="fa fa-search text-white d-lg-none d-block mob-search-tog" aria-hidden="true"></i>
             </div>
-            <a class="navbar-brand m-0" href="#"><img src="accets/image/kroger-logo.svg" width="100vw" alt=""></a>
+            <a class="navbar-brand m-0" href="home.html"><img src="accets/image/kroger-logo.svg" width="100vw"
+                    alt=""></a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul> -->
-                <form class="d-flex justify-content-center w-100" role="search">
+                <form class="d-flex justify-content-center w-100 d-lg-block d-none" role="search">
                     <div class="bg-white py-1 d-flex align-items-center rounded-pill col-lg-8 overflow-hidden px-3">
                         <input class="form-control me-2 border-0 w-100" type="search" placeholder="Search"
                             aria-label="Search">
@@ -359,27 +752,42 @@
 
             <div class="d-flex gap-4 text-white">
                 <div class="text-center d-lg-block d-none">
-                    <i class="fa-regular fa-heart fs-5"></i>
-                    <div class="fs-resp d-lg-block d-none fs-sm">Wish Lists</div>
+                    <a href="wishlist.html">
+                        <i class="fa-regular fa-heart fs-5"></i>
+                        <div class="fs-resp d-lg-block d-none fs-sm">Wish Lists</div>
+                    </a>
                 </div>
                 <div class="text-center">
-                    <i class="fa-regular fa-user fs-5"></i>
-                    <div class="fs-resp d-lg-block d-none fs-sm">Sign In</div>
+                    <a href="sign-in.html">
+                        <i class="fa-regular fa-user fs-5"></i>
+                        <div class="fs-resp d-lg-block d-none fs-sm">Sign In</div>
+                    </a>
                 </div>
                 <div class="text-center cart-tog">
-                    <i class="fa-solid fa-cart-shopping fs-5"></i>
-                    <div class="fs-resp d-lg-block d-none fs-sm">Cart</div>
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <div class="fs-resp d-lg-block d-none fs-sm">Cart</div>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="bg-body-tertiary py-2 shadow-sm">
+        <div class="bg-body-tertiary py-2 shadow-sm d-lg-block d-none">
             <div class="container">
                 <ul class="p-0 d-flex gap-4 m-0">
                     <li class="fw-semibold shop-btn"><a href="#">Shop</a></li>
-                    <li class="fw-semibold"><a href="#">About Us</a></li>
-                    <li class="fw-semibold"><a href="#">Pickup & Delivery</a></li>
-                    <li class="fw-semibold"><a href="#">Blogs</a></li>
+                    <li class="fw-semibold"><a href="About.html">About Us</a></li>
+                    <div class="dropdown">
+                        <li class="fw-semibold dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"><a href="#">Pickup & Delivery</a></li>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Free-pickup.html">Free Pickup</a></li>
+                            <li><a class="dropdown-item" href="Kroger-Delivery.html">Kroger Delivery</a></li>
+                            <li><a class="dropdown-item" href="All-Delivery-Options.html">All Delivery Options</a></li>
+                            <li><a class="dropdown-item" href="Ship-to-Home.html">Ship to Home</a></li>
+                        </ul>
+                    </div>
+                    <li class="fw-semibold"><a href="blog.html">Blogs</a></li>
                 </ul>
             </div>
         </div>
@@ -395,12 +803,12 @@
                 <div class="col-lg-3">
                     <div class="">
                         <!-- Tabs Start -->
-                        <div class="container py-0 tabs rounded-3">
+                        <div class="container py-0 tabs rounded-4">
                             <ul class="tab-list d-grid border-end">
-                                <li id="select-1" class="active pointer fs-6 fw-semibold">
+                                <li id="select-1" class="active fs-6 fw-semibold">
                                     <a>Popular</a>
                                 </li>
-                                <li id="select-2" class="pointer fs-6 fw-semibold">
+                                <li id="select-2" class="fs-6 fw-semibold">
                                     <a>Seasonal Favorites</a>
                                 </li>
                                 <li id="select-3" class="fs-6 fw-semibold">
@@ -435,16 +843,16 @@
                         <!-- Tabs End -->
                     </div>
                 </div>
-                <div class="col-lg-9 rounded-3">
+                <div class="col-lg-9 rounded-4">
                     <section class="px-lg-0 px-3">
                         <div class="row">
                             <!-- Tabs Content Start -->
-                            <div class="tabs-content my-0" id="content-select-1">
+                            <div class="tabs-content my-0 active" id="content-select-1">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="fw-semibold my-2">I Would Like to:</div>
                                         <ul class="p-0">
-                                            <li><a href="#">Start a Pickup or Delivery Order</a></li>
+                                            <li><a href="shop.html">Start a Pickup or Delivery Order</a></li>
                                             <li><a href="#">Save with This Week's Top Deals</a></li>
                                             <li><a href="#">Explore Health Services</a></li>
                                             <li><a href="#">Order Ahead Cakes, Party Platters & More</a></li>
@@ -1186,14 +1594,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tabs-content my-0 active" id="content-select-8">
+                            <div class="tabs-content my-0" id="content-select-8">
                                 <!-- inside tab -->
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-4">
-
-
-
                                             <!-- Vertical Tabs Links -->
                                             <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
                                                 <li class="nav-item active" role="presentation" id="tab001-tab"
@@ -1534,16 +1939,19 @@
         <div class="container">
             <div class="one-time">
                 <div>
-                    <img src="https://qne.com.pk/cdn/shop/files/Banner2_11.11_4332b417-c6f8-4dcc-9a77-460524535eb2.png?v=1731318099&width=1370"
-                        width="100%" alt="">
+                    <img class="object-fit-cover"
+                        src="https://fs01.cap.ru/www20/economy/news/2020/01/28/81add989-7b93-48be-aea4-8f0993e3c737/original.jpg"
+                        width="100%" height="450px" alt="">
                 </div>
                 <div>
-                    <img src="https://qne.com.pk/cdn/shop/files/Hilal_banner_2046c502-7e0d-4801-b121-3188f8c7392f.png?v=1731334964&width=1370"
-                        width="100%" alt="">
+                    <img class="object-fit-cover"
+                        src="https://www.kroger.com/content/v2/binary/image/7482536_24_p11w1_hp_thanksgiving_wpd_turkey_hex_cb4d21_dsk_640x312.png"
+                        width="100%" height="450px" alt="">
                 </div>
                 <div>
-                    <img src="https://qne.com.pk/cdn/shop/files/Banner2_11.11_4332b417-c6f8-4dcc-9a77-460524535eb2.png?v=1731318099&width=1370"
-                        width="100%" alt="">
+                    <img class="object-fit-cover"
+                        src="https://www.retail.ru/upload/medialibrary/898/shutterstock_586778033.jpg" width="100%"
+                        height="450px" alt="">
                 </div>
             </div>
         </div>
@@ -1554,32 +1962,25 @@
 
     <section>
         <div class="container">
-            <div class="row ">
-                <div class="col-lg-3 col-md-6 col-6">
-                    <div class="rounded-3 overflow-hidden">
+            <div class="row gap-lg-0 gap-md-0 gap-3">
+                <div class="col-lg-4 col-md fade">
+                    <div class="rounded-4 overflow-hidden">
                         <img class="hov-img"
-                            src="https://qne.com.pk/cdn/shop/files/SIDER_BANNER_Mobile_Accessories_250x250_4e3d5b3c-b029-481f-a3bf-10aacaead59d_470x.png?v=1727465849"
+                            src="https://www.kroger.com/content/v2/binary/image/6792918_24_p11w1_hp_te_wdd_dsk_406x224.png"
                             width="100%" alt="">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-6">
-                    <div class="rounded-3 overflow-hidden">
+                <div class="col-lg-4 col-md fade">
+                    <div class="rounded-4 overflow-hidden">
                         <img class="hov-img"
-                            src="https://qne.com.pk/cdn/shop/files/SIDER_BANNER_Mobile_Accessories_250x250_4e3d5b3c-b029-481f-a3bf-10aacaead59d_470x.png?v=1727465849"
+                            src="https://www.kroger.com/content/v2/binary/image/6792918_24_p11w1_hp_te_bf_dsk_406x224.png"
                             width="100%" alt="">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-6">
-                    <div class="rounded-3 overflow-hidden">
+                <div class="col-lg-4 col-md fade">
+                    <div class="rounded-4 overflow-hidden">
                         <img class="hov-img"
-                            src="https://qne.com.pk/cdn/shop/files/SIDER_BANNER_Mobile_Accessories_250x250_4e3d5b3c-b029-481f-a3bf-10aacaead59d_470x.png?v=1727465849"
-                            width="100%" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6">
-                    <div class="rounded-3 overflow-hidden">
-                        <img class="hov-img"
-                            src="https://qne.com.pk/cdn/shop/files/SIDER_BANNER_Mobile_Accessories_250x250_4e3d5b3c-b029-481f-a3bf-10aacaead59d_470x.png?v=1727465849"
+                            src="https://www.kroger.com/content/v2/binary/image/6792853_24_p10w4_hp_te_save50_dsk_406x224.png"
                             width="100%" alt="">
                     </div>
                 </div>
@@ -1587,7 +1988,7 @@
         </div>
 
 
-        <div class="container py-4">
+        <div class="container py-4 fade">
             <img src="https://qne.com.pk/cdn/shop/files/Banner_1170x140_f2b173ff-c4bc-47d8-b7e3-000710be47bd.png?v=1727465926&width=1500"
                 width="100%" alt="">
         </div>
@@ -1595,47 +1996,49 @@
 
     <section class="bg-light py-3">
         <div class="container">
-            <div class="fw-bold fs-5 my-3">Shop by Categories</div>
+            <div class="fw-bold fs-5 my-3">Explore More at Kroger</div>
             <div class="row responsive">
-                <div class="px-2">
-                    <div class=""><img src="https://qne.com.pk/cdn/shop/files/Cooking-11_1570x.png?v=1727721199"
+                <div class="px-2 fade">
+                    <div class=""><img
+                            src="https://www.kroger.com/content/v2/binary/image/p4w1_477819_hp_icon_4x_330.png"
                             width="100%" alt=""></div>
-                    <div class="text-center">Spices & Recipe Mix</div>
+                    <div class="text-center">On Gift Cards</div>
                 </div>
-                <div class="px-2">
-                    <div class=""><img src="https://qne.com.pk/cdn/shop/files/Cooking-11_1570x.png?v=1727721199"
+                <div class="px-2 fade">
+                    <div class=""><img
+                            src="https://www.kroger.com/content/v2/binary/image/6792918_24_p11w1_hp_holiday_icon_330.png"
                             width="100%" alt=""></div>
-                    <div class="text-center">Spices & Recipe Mix</div>
+                    <div class="text-center">Holiday Gifting</div>
                 </div>
-                <div class="px-2">
-                    <div class=""><img src="https://qne.com.pk/cdn/shop/files/Cooking-11_1570x.png?v=1727721199"
+                <div class="px-2 fade">
+                    <div class=""><img
+                            src="https://www.kroger.com/content/v2/binary/image/6789771_24_p8w3_hp_icon_easymeals_ent_330.png"
                             width="100%" alt=""></div>
-                    <div class="text-center">Spices & Recipe Mix</div>
+                    <div class="text-center">Quick & Easy Meals</div>
                 </div>
-                <div class="px-2">
-                    <div class=""><img src="https://qne.com.pk/cdn/shop/files/Cooking-11_1570x.png?v=1727721199"
+                <div class="px-2 fade">
+                    <div class=""><img
+                            src="https://www.kroger.com/content/v2/binary/image/6292455_24_P4W2_HP_Icon_NewArrivals_330.png"
                             width="100%" alt=""></div>
-                    <div class="text-center">Spices & Recipe Mix</div>
+                    <div class="text-center">Hot New Arrivals</div>
                 </div>
-                <div class="px-2">
-                    <div class=""><img src="https://qne.com.pk/cdn/shop/files/Cooking-11_1570x.png?v=1727721199"
+                <div class="px-2 fade">
+                    <div class=""><img
+                            src="https://www.kroger.com/content/v2/binary/image/homepage/imageset_5301719_23_p6w3_storeless_icon_snap_330--5301719_23_p6w3_storeless_icon_snap_330.png"
                             width="100%" alt=""></div>
-                    <div class="text-center">Spices & Recipe Mix</div>
+                    <div class="text-center">SNAP EBT</div>
                 </div>
-                <div class="px-2">
-                    <div class=""><img src="https://qne.com.pk/cdn/shop/files/Cooking-11_1570x.png?v=1727721199"
+                <div class="px-2 fade">
+                    <div class=""><img
+                            src="https://www.kroger.com/content/v2/binary/image/6792338_24_p9w4_ent_hp_icon_itemspickedforyou_330-1.png"
                             width="100%" alt=""></div>
-                    <div class="text-center">Spices & Recipe Mix</div>
+                    <div class="text-center">Items Picked for You</div>
                 </div>
-                <div class="px-2">
-                    <div class=""><img src="https://qne.com.pk/cdn/shop/files/Cooking-11_1570x.png?v=1727721199"
+                <div class="px-2 fade">
+                    <div class=""><img
+                            src="https://www.kroger.com/content/v2/binary/image/6292455_24_P4W2_HP_Icon_NewArrivals_330.png"
                             width="100%" alt=""></div>
-                    <div class="text-center">Spices & Recipe Mix</div>
-                </div>
-                <div class="px-2">
-                    <div class=""><img src="https://qne.com.pk/cdn/shop/files/Cooking-11_1570x.png?v=1727721199"
-                            width="100%" alt=""></div>
-                    <div class="text-center">Spices & Recipe Mix</div>
+                    <div class="text-center">Hot New Arrivals</div>
                 </div>
             </div>
         </div>
@@ -1643,99 +2046,177 @@
 
     <section class="bg-light py-3">
         <div class="container">
-            <div class="fw-bold fs-5 my-3">Mobile Accessories <a class="fw-normal text-decoration-underline fs-6 ms-4"
+            <div class="fw-bold fs-5 my-3">Start Your Order<a class="fw-normal text-decoration-underline fs-6 ms-4"
                     href="">View all</a></div>
 
             <div class="row responsive-4">
                 <div class="col-lg-3">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0004800121348" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0000000003283" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0000000004816" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0001111011511" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0000000004225" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0001111009855" width="100%"
+                                alt="">
+
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0000000004166" width="100%"
+                                alt="">
+
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1743,152 +2224,307 @@
 
     <section class="bg-light py-3">
         <div class="container">
-            <div class="fw-bold fs-5 my-3">Top Brands <a class="fw-normal text-decoration-underline fs-6 ms-4"
-                    href="">View all</a></div>
-
-            <div class="row responsive">
-
-                <div class="col-lg-3">
-                    <div class="px-2">
-                        <img src="https://qne.com.pk/cdn/shop/files/Unilever_ba554f10-a992-4715-b1b0-39a7677b0098_775x.png?v=1727466038"
-                            width="100%" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="px-2">
-                        <img src="https://qne.com.pk/cdn/shop/files/Unilever_ba554f10-a992-4715-b1b0-39a7677b0098_775x.png?v=1727466038"
-                            width="100%" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="px-2">
-                        <img src="https://qne.com.pk/cdn/shop/files/Unilever_ba554f10-a992-4715-b1b0-39a7677b0098_775x.png?v=1727466038"
-                            width="100%" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="px-2">
-                        <img src="https://qne.com.pk/cdn/shop/files/Unilever_ba554f10-a992-4715-b1b0-39a7677b0098_775x.png?v=1727466038"
-                            width="100%" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="px-2">
-                        <img src="https://qne.com.pk/cdn/shop/files/Unilever_ba554f10-a992-4715-b1b0-39a7677b0098_775x.png?v=1727466038"
-                            width="100%" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="px-2">
-                        <img src="https://qne.com.pk/cdn/shop/files/Unilever_ba554f10-a992-4715-b1b0-39a7677b0098_775x.png?v=1727466038"
-                            width="100%" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="px-2">
-                        <img src="https://qne.com.pk/cdn/shop/files/Unilever_ba554f10-a992-4715-b1b0-39a7677b0098_775x.png?v=1727466038"
-                            width="100%" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-light py-3">
-        <div class="container">
-            <div class="fw-bold fs-5 my-3">Current Top Sellers <a class="fw-normal text-decoration-underline fs-6 ms-4"
-                    href="">View all</a></div>
+            <div class="fw-bold fs-5 my-3">Save $10 on Household Items<a
+                    class="fw-normal text-decoration-underline fs-6 ms-4" href="">View all</a></div>
 
             <div class="row responsive-4">
                 <div class="col-lg-3">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0003700097726" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0003077212101" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0003077212140" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0003600054317" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0001901461090" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0003077209496" width="100%"
+                                alt="">
+
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-3">
+        <div class="container">
+            <div class="fw-bold fs-5 my-3">Low Prices on Everyday Essentials<a
+                    class="fw-normal text-decoration-underline fs-6 ms-4" href="">View all</a></div>
+
+            <div class="row responsive-4">
+                <div class="col-lg-3">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0001111085605" width="100%"
+                                alt="">
+
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0002800021580" width="100%"
+                                alt="">
+
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0001111084961" width="100%"
+                                alt="">
+
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0001111082354" width="100%"
+                                alt="">
+
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0001111038644" width="100%"
+                                alt="">
+
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                            <img src="https://www.kroger.com/product/images/medium/front/0001111058033" width="100%"
+                                alt="">
+
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1897,17 +2533,17 @@
     <section class="bg-light py-3">
         <div class="container">
             <div class="row gap-lg-0 gap-md-0 gap-3">
-                <div class="col-lg-6 col-md-6">
-                    <div class="overflow-hidden rounded-3">
+                <div class="col-lg-6 col-md-6 fade">
+                    <div class="overflow-hidden rounded-4">
                         <img class="hov-img"
-                            src="https://qne.com.pk/cdn/shop/files/banner_f741ae7e-bbfc-4e53-8f60-b3ded42029e1_1570x.jpg?v=1731335082"
+                            src="https://thumbs.dreamstime.com/b/grocery-shopping-banner-consumer-holding-bag-zj7XGJ7EF-vegetables-fruits-other-food-products-icons-set-68647069.jpg"
                             width="100%" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="overflow-hidden rounded-3">
+                <div class="col-lg-6 col-md-6 fade">
+                    <div class="overflow-hidden rounded-4">
                         <img class="hov-img"
-                            src="https://qne.com.pk/cdn/shop/files/banner_f741ae7e-bbfc-4e53-8f60-b3ded42029e1_1570x.jpg?v=1731335082"
+                            src="https://g.foolcdn.com/editorial/images/577790/grocery-shopping-super-sale-ad.jpg"
                             width="100%" alt="">
                     </div>
                 </div>
@@ -1920,90 +2556,131 @@
             <div class="row">
                 <div class="col-lg-3 col-md-4">
                     <div>
-                        <img src="https://qne.com.pk/cdn/shop/files/Left_Banner_261x540_4.png?v=1727478389" width="100%"
+                        <img class="rounded-4 fade"
+                            src="https://i.pinimg.com/736x/73/7f/e8/737fe8396799a89a881d5d5b13c6ee79.jpg" width="100%"
                             alt="">
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-8">
-                    <div class="fw-bold fs-5 my-3">Shop Lipton Products</div>
+                    <div class="fw-bold fs-5 my-3">Winning Game Day Picks</div>
 
                     <div class="row responsive-3">
                         <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
+                            <a href="product-details.html">
+                                <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                                    <img src="https://www.kroger.com/product/images/medium/front/0001111096972"
+                                        width="100%" alt="">
 
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    <div class="d-flex flex-column gap-3">
+                                        <div>Lorem ipsum dolor sit amet.</div>
+                                        <div class="fw-bold">
+                                            <s>Rs.240.00</s>
+                                            <span class="text-danger">Rs.140.00</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn btn-outline-primary rounded-pill w-100">Add to
+                                                cart</button>
+                                            <a href="wishlist.html">
+                                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
+                            <a href="product-details.html">
+                                <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                                    <img src="https://www.kroger.com/product/images/medium/front/0001111009784"
+                                        width="100%" alt="">
 
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    <div class="d-flex flex-column gap-3">
+                                        <div>Lorem ipsum dolor sit amet.</div>
+                                        <div class="fw-bold">
+                                            <s>Rs.240.00</s>
+                                            <span class="text-danger">Rs.140.00</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn btn-outline-primary rounded-pill w-100">Add to
+                                                cart</button>
+                                            <a href="wishlist.html">
+                                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
+                            <a href="product-details.html">
+                                <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                                    <img src="https://www.kroger.com/product/images/medium/front/0002670012915"
+                                        width="100%" alt="">
 
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    <div class="d-flex flex-column gap-3">
+                                        <div>Lorem ipsum dolor sit amet.</div>
+                                        <div class="fw-bold">
+                                            <s>Rs.240.00</s>
+                                            <span class="text-danger">Rs.140.00</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn btn-outline-primary rounded-pill w-100">Add to
+                                                cart</button>
+                                            <a href="wishlist.html">
+                                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
+                            <a href="product-details.html">
+                                <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                                    <img src="https://www.kroger.com/product/images/medium/front/0001590013401"
+                                        width="100%" alt="">
 
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    <div class="d-flex flex-column gap-3">
+                                        <div>Lorem ipsum dolor sit amet.</div>
+                                        <div class="fw-bold">
+                                            <s>Rs.240.00</s>
+                                            <span class="text-danger">Rs.140.00</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn btn-outline-primary rounded-pill w-100">Add to
+                                                cart</button>
+                                            <a href="wishlist.html">
+                                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
+                        <div class="col-lg-4">
+                            <a href="product-details.html">
+                                <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                                    <img src="https://www.kroger.com/product/images/medium/front/0004280010953"
+                                        width="100%" alt="">
+
+                                    <div class="d-flex flex-column gap-3">
+                                        <div>Lorem ipsum dolor sit amet.</div>
+                                        <div class="fw-bold">
+                                            <s>Rs.240.00</s>
+                                            <span class="text-danger">Rs.140.00</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn btn-outline-primary rounded-pill w-100">Add to
+                                                cart</button>
+                                            <a href="wishlist.html">
+                                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -2014,22 +2691,22 @@
         <div class="container">
             <div class="row gap-lg-0 gap-md-0 gap-3">
                 <div class="col-lg-4 col-md-4">
-                    <div class="overflow-hidden rounded-3">
-                        <img class="hov-img"
+                    <div class="overflow-hidden rounded-4">
+                        <img class="hov-img fade"
                             src="https://qne.com.pk/cdn/shop/files/Bottom_banner_510x190_Taza_Phal_aur_sabzi_1066x.png?v=1727803435"
                             width="100%" alt="">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <div class="overflow-hidden rounded-3">
-                        <img class="hov-img"
+                    <div class="overflow-hidden rounded-4">
+                        <img class="hov-img fade"
                             src="https://qne.com.pk/cdn/shop/files/Bottom_banner_510x190_Taza_Phal_aur_sabzi_1066x.png?v=1727803435"
                             width="100%" alt="">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <div class="overflow-hidden rounded-3">
-                        <img class="hov-img"
+                    <div class="overflow-hidden rounded-4">
+                        <img class="hov-img fade"
                             src="https://qne.com.pk/cdn/shop/files/Bottom_banner_510x190_Taza_Phal_aur_sabzi_1066x.png?v=1727803435"
                             width="100%" alt="">
                     </div>
@@ -2043,402 +2720,106 @@
             <div class="row">
                 <div class="col-lg-3 col-md-4">
                     <div>
-                        <img src="https://qne.com.pk/cdn/shop/files/Left_Banner_261x540_87dfbb30-032a-4dd0-ac37-4fe4a739019d.png?v=1727478536"
+                        <img class="rounded-4 fade"
+                            src="https://img.freepik.com/premium-psd/fresh-grocery-sale-banner_120329-258.jpg?w=900"
                             width="100%" alt="">
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-8">
-                    <div class="fw-bold fs-5 my-3">Shop Unilever Products</div>
+                    <div class="fw-bold fs-5 my-3">A Harvest of Fresh Picks</div>
 
                     <div class="row responsive-3">
                         <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
+                            <a href="product-details.html">
+                                <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                                    <img src="https://www.kroger.com/product/images/medium/front/0000000003082"
+                                        width="100%" alt="">
 
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    <div class="d-flex flex-column gap-3">
+                                        <div>Lorem ipsum dolor sit amet.</div>
+                                        <div class="fw-bold">
+                                            <s>Rs.240.00</s>
+                                            <span class="text-danger">Rs.140.00</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn btn-outline-primary rounded-pill w-100">Add to
+                                                cart</button>
+                                            <a href="wishlist.html">
+                                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
+                            <a href="product-details.html">
+                                <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                                    <img src="https://www.kroger.com/product/images/medium/front/0001111091620"
+                                        width="100%" alt="">
 
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    <div class="d-flex flex-column gap-3">
+                                        <div>Lorem ipsum dolor sit amet.</div>
+                                        <div class="fw-bold">
+                                            <s>Rs.240.00</s>
+                                            <span class="text-danger">Rs.140.00</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn btn-outline-primary rounded-pill w-100">Add to
+                                                cart</button>
+                                            <a href="wishlist.html">
+                                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
+                            <a href="product-details.html">
+                                <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                                    <img src="https://www.kroger.com/product/images/medium/front/0000000004023"
+                                        width="100%" alt="">
 
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    <div class="d-flex flex-column gap-3">
+                                        <div>Lorem ipsum dolor sit amet.</div>
+                                        <div class="fw-bold">
+                                            <s>Rs.240.00</s>
+                                            <span class="text-danger">Rs.140.00</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn btn-outline-primary rounded-pill w-100">Add to
+                                                cart</button>
+                                            <a href="wishlist.html">
+                                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
+                            <a href="product-details.html">
+                                <div class="main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade">
+                                    <img src="https://www.kroger.com/product/images/medium/front/0000000004067"
+                                        width="100%" alt="">
 
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    <div class="d-flex flex-column gap-3">
+                                        <div>Lorem ipsum dolor sit amet.</div>
+                                        <div class="fw-bold">
+                                            <s>Rs.240.00</s>
+                                            <span class="text-danger">Rs.140.00</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn btn-outline-primary rounded-pill w-100">Add to
+                                                cart</button>
+                                            <a href="wishlist.html">
+                                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-light py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4">
-                    <div>
-                        <img src="https://qne.com.pk/cdn/shop/files/Left_Banner_261x540_Shop_Pepsi.png?v=1728573179"
-                            width="100%" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-8">
-                    <div class="fw-bold fs-5 my-3">Shop Pepsico Products</div>
-
-                    <div class="row responsive-3">
-                        <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
-
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
-
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
-
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
-
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-light py-3">
-        <div class="container">
-            <div class="row gap-lg-0 gap-md-0 gap-3">
-                <div class="col-lg-4 col-md-4">
-                    <div class="overflow-hidden rounded-3">
-                        <img class="hov-img"
-                            src="https://qne.com.pk/cdn/shop/files/Bottom_banner_510x190_Taza_Phal_aur_sabzi_1066x.png?v=1727803435"
-                            width="100%" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="overflow-hidden rounded-3">
-                        <img class="hov-img"
-                            src="https://qne.com.pk/cdn/shop/files/Bottom_banner_510x190_Taza_Phal_aur_sabzi_1066x.png?v=1727803435"
-                            width="100%" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="overflow-hidden rounded-3">
-                        <img class="hov-img"
-                            src="https://qne.com.pk/cdn/shop/files/Bottom_banner_510x190_Taza_Phal_aur_sabzi_1066x.png?v=1727803435"
-                            width="100%" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-light py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4">
-                    <div>
-                        <img src="https://qne.com.pk/cdn/shop/files/Left_Banner_261x540_2.png?v=1727478728" width="100%"
-                            alt="">
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-8">
-                    <div class="fw-bold fs-5 my-3">Shop Shan Products</div>
-
-                    <div class="row responsive-3">
-                        <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
-
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
-
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
-
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
-
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-light py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4">
-                    <div>
-                        <img src="https://qne.com.pk/cdn/shop/files/Left_Banner_261x540_2dd90126-9cc8-4e2e-93c3-fd30c51b7c03.png?v=1729871126"
-                            width="100%" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-8">
-                    <div class="fw-bold fs-5 my-3">Shop Olpers Products</div>
-
-                    <div class="row responsive-3">
-                        <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
-
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
-
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
-
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="bg-white p-3">
-                                <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                                    width="100%" alt="">
-
-                                <div class="d-flex flex-column gap-3">
-                                    <div>Lorem ipsum dolor sit amet.</div>
-                                    <div class="fw-bold">
-                                        <s>Rs.240.00</s>
-                                        <span class="text-danger">Rs.140.00</span>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                            cart</button>
-                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -2450,190 +2831,233 @@
         <div class="container">
             <div class="fw-bold fs-5 my-3">Exclusive Discounts</div>
             <div class="row">
-                <div class="mb-3 col-lg-3 col-md-4 col-6">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                <div class="mb-3 col-xl-2 col-lg-3 col-md-4 col-6 px-2 fade">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-lg-3 p-2 py-3 rounded-4">
+                            <img src="https://www.kroger.com/product/images/medium/front/0001111013621" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                    cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="mb-3 col-lg-3 col-md-4 col-6">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                <div class="mb-3 col-xl-2 col-lg-3 col-md-4 col-6 px-2 fade">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-lg-3 p-2 py-3 rounded-4">
+                            <img src="https://www.kroger.com/product/images/medium/front/0007192123298" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                    cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="mb-3 col-lg-3 col-md-4 col-6">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                <div class="mb-3 col-xl-2 col-lg-3 col-md-4 col-6 px-2 fade">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-lg-3 p-2 py-3 rounded-4">
+                            <img src="https://www.kroger.com/product/images/medium/front/0001111097266" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                    cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="mb-3 col-lg-3 col-md-4 col-6">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                <div class="mb-3 col-xl-2 col-lg-3 col-md-4 col-6 px-2 fade">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-lg-3 p-2 py-3 rounded-4">
+                            <img src="https://www.kroger.com/product/images/medium/front/0004470000053" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                    cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="mb-3 col-lg-3 col-md-4 col-6">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                <div class="mb-3 col-xl-2 col-lg-3 col-md-4 col-6 px-2 fade">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-lg-3 p-2 py-3 rounded-4">
+                            <img src="https://www.kroger.com/product/images/medium/front/0002370001415" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                    cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="mb-3 col-lg-3 col-md-4 col-6">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                <div class="mb-3 col-xl-2 col-lg-3 col-md-4 col-6 px-2 fade">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-lg-3 p-2 py-3 rounded-4">
+                            <img src="https://www.kroger.com/product/images/medium/front/0002370001415" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                    cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="mb-3 col-lg-3 col-md-4 col-6">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                <div class="mb-3 col-xl-2 col-lg-3 col-md-4 col-6 px-2 fade">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-lg-3 p-2 py-3 rounded-4">
+                            <img src="https://www.kroger.com/product/images/medium/front/0001111013621" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                    cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="mb-3 col-lg-3 col-md-4 col-6">
-                    <div class="bg-white p-3">
-                        <img src="https://qne.com.pk/cdn/shop/products/orgsize_17322Daal_20Mooth_20Classic_785x.jpg?v=1623914841"
-                            width="100%" alt="">
+                <div class="mb-3 col-xl-2 col-lg-3 col-md-4 col-6 px-2 fade">
+                    <a href="product-details.html">
+                        <div class="main-cards bg-white p-lg-3 p-2 py-3 rounded-4">
+                            <img src="https://www.kroger.com/product/images/medium/front/0007192123298" width="100%"
+                                alt="">
 
-                        <div class="d-flex flex-column gap-3">
-                            <div>Lorem ipsum dolor sit amet.</div>
-                            <div class="fw-bold">
-                                <s>Rs.240.00</s>
-                                <span class="text-danger">Rs.140.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-outline-primary rounded-pill w-100" tabindex="0">Add to
-                                    cart</button>
-                                <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                            <div class="d-flex flex-column gap-3">
+                                <div>Lorem ipsum dolor sit amet.</div>
+                                <div class="fw-bold">
+                                    <s>Rs.240.00</s>
+                                    <span class="text-danger">Rs.140.00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="cart.html">
+                                        <button class="btn btn-outline-primary rounded-pill w-100">Add to cart</button>
+                                    </a>
+                                    <a href="wishlist.html">
+                                        <i class="fa-regular fa-heart fs-4 p-2 bg-light rounded-pill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="bg-light py-3">
-
         <div class="text-center fw-bold fs-3 mb-4">Why shop with us?</div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-3">
-                    <div class="text-center bg-white p-3 h-100 rounded-3">
+                    <div
+                        class="text-center main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade h-100 rounded-4">
                         <i class="fs-1 text-primary my-3 fa-regular fa-star-half-stroke"></i>
                         <div class="fw-bold">SAVINGS SAVINGS & SAVINGS</div>
                         <div>Mega discount offers all year round.</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-3">
-                    <div class="text-center bg-white p-3 h-100 rounded-3">
+                    <div
+                        class="text-center main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade h-100 rounded-4">
                         <i class="fs-1 text-primary my-3 fa-solid fa-layer-group"></i>
                         <div class="fw-bold">ALL THINGS AT ONE CLICK</div>
                         <div>All your essential products available at QnE</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-3">
-                    <div class="text-center bg-white p-3 h-100 rounded-3">
+                    <div
+                        class="text-center main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade h-100 rounded-4">
                         <i class="fs-1 text-primary my-3 fa-solid fa-truck"></i>
                         <div class="fw-bold">FAST SHIPPING</div>
                         <div>Fast and convenient delivery at your doorstep</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-3">
-                    <div class="text-center bg-white p-3 h-100 rounded-3">
+                    <div
+                        class="text-center main-cards bg-white p-xl-3 p-lg-2 p-2 py-3 mx-2 rounded-4 fade h-100 rounded-4">
                         <i class="fs-1 text-primary my-3 fa-solid fa-circle-question"></i>
                         <div class="fw-bold">HAVE QUESTIONS?</div>
                         <div>Excellent Customer Service - We’re here and happy to help!</div>
@@ -2711,6 +3135,7 @@
     </footer>
 
 
+    <script src="accets/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -2724,138 +3149,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="accets/script.js"></script>
+    <script src="accets/jQuery.js"></script>
 
-    <script>
-        $(".tab-list li").on("click", function () {
-            var tabId = ".tab-list li#" + $(this).attr("id");
-            var tabDivId = ".tabs-content#content-" + $(this).attr("id");
-
-            if (!$(this).hasClass("active")) {
-                $(".tab-list li").removeClass("active");
-                $(this).addClass("active");
-
-                $(".tabs-content").removeClass("active");
-                $(tabDivId).addClass("active");
-            }
-        });
-
-
-
-        $('.responsive').slick({
-            dots: true,
-            infinite: false,
-            speed: 900,
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-
-
-        $('.responsive-4').slick({
-            dots: true,
-            infinite: false,
-            speed: 900,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-
-
-        $('.responsive-3').slick({
-            dots: true,
-            infinite: false,
-            speed: 900,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-
-        $('.one-time').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            fade: true,
-            slidesToShow: 1,
-            adaptiveHeight: true
-        });
-
-
-
-
-    </script>
 </body>
 
 </html>
